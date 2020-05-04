@@ -1,7 +1,29 @@
-# laboratory
+# PlugIn@axios-global-config
 
-实验、测试代码。具体代码查看对应分支。
+## Download Branch
+```
+git clone -b PlugIn@axios-global-config https://github.com/haiweilian/laboratory.git
+```
 
-## PlugIn
+## Project setup
+```
+npm install
+```
 
-- [axios封装](https://github.com/haiweilian/laboratory/tree/PlugIn%40axios-global-config)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
