@@ -4,4 +4,4 @@
 
 ## PlugIn
 
-- [axios封装](https://github.com/haiweilian/laboratory/tree/PlugIn%40axios-global-config)
+- [axios基础封装、全局Loading](https://github.com/haiweilian/laboratory/tree/PlugIn%40axios-global-config)
