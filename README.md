@@ -1,4 +1,4 @@
-# Vue@vuex-simple-implementation
+# vuex简单实现
 
 ## Download Branch
 ```
