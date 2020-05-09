@@ -1,7 +1,29 @@
-# laboratory
+# Vue@vuex-simple-implementation
 
-实验、测试代码。具体代码查看对应分支。
+## Download Branch
+```
+git clone -b Vue@vuex-simple-implementation https://github.com/haiweilian/laboratory.git
+```
 
-## PlugIn
+## Project setup
+```
+npm install
+```
 
-- [axios基础封装、全局Loading](https://github.com/haiweilian/laboratory/tree/PlugIn%40axios-global-config)
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
