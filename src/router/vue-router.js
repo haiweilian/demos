@@ -9,14 +9,14 @@ class VueRouter {
     // `Vue.util.defineReactive` 未公开文档，在 vue 源码的 src/core/global-api/index.js 里面。
     Vue.util.defineReactive(this, 'current', '')
 
-    // 当路由变化的时候，重新赋值当前路径
-    window.addEventListener('hashchange', () => {
+    // 当路由变化的时候，重新赋值当前路径，当操作前进、后退的时候才会触发。
+    window.addEventListener('popstate', () => {
       this.onHashChange()
     })
   }
 
   onHashChange () {
-    this.current = window.location.hash.slice(1) || '/'
+    this.current = window.location.pathname || '/'
   }
 }
 
@@ -35,7 +35,7 @@ VueRouter.install = function (_Vue) {
     }
   })
 
-  // 注册 router-link 组件，利用 a 标签跳转。
+  // 注册 router-link 组件，利用 pushState 跳转。
   Vue.component('router-link', {
     props: {
       to: {
@@ -45,7 +45,17 @@ VueRouter.install = function (_Vue) {
     },
     render (h) {
       return h('a', {
-        attrs: { href: `#${this.to}` }
+        attrs: { href: this.to },
+        on: {
+          // 绑定点击事件，改变路由
+          click: event => {
+            event.preventDefault()
+            // pushState 不会触发 popstate
+            window.history.pushState({}, '', this.to)
+            // 手动执行变换
+            this.$router.onHashChange()
+          }
+        }
       },
       this.$slots.default
       )

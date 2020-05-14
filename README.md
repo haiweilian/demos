@@ -1,8 +1,8 @@
-# vue-router简单实现hash模式
+# vue-router简单实现history模式
 
 ## Download Branch
 ```
-git clone -b Vue@vue-router-hash-simple-implementation https://github.com/haiweilian/laboratory.git
+git clone -b Vue@vue-router-history-simple-implementation https://github.com/haiweilian/laboratory.git
 ```
 
 ## Project setup
