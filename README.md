@@ -10,3 +10,4 @@
 
 - [vuex简单实现](https://github.com/haiweilian/laboratory/tree/Vue%40vuex-simple-implementation)
 - [vue-router简单实现hash模式](https://github.com/haiweilian/laboratory/tree/Vue%40vue-router-hash-simple-implementation)
+- [vue-router简单实现history模式](https://github.com/haiweilian/laboratory/tree/Vue%40vue-router-history-simple-implementation)
