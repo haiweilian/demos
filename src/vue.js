@@ -2,12 +2,19 @@ function defineReactive(obj, key, val) {
   // val 可能还是对象，继续递归
   observe(val);
 
+  // 创建 Dep 实例，它和 key 一对一对应关系
+  const dep = new Dep();
+
   Object.defineProperty(obj, key, {
     get() {
+      // Dep.target 就是当前新创建 Watcher 实例
+      Dep.target && dep.addDep(Dep.target);
       return val;
     },
     set(newVal) {
       if (newVal !== val) {
+        val = newVal;
+        dep.notify();
         console.log("set...", key, newVal);
       }
     },
@@ -20,7 +27,7 @@ function observe(obj) {
     return;
   }
   Object.keys(obj).forEach((key) => {
-    defineReactive(obj, key, obj[key])
+    defineReactive(obj, key, obj[key]);
   });
 }
 
@@ -105,10 +112,10 @@ class Compile {
         const dir = name.substring(2);
         // 执行指令对应的函数 v-text --> text()
         this[dir] && this[dir](node, value, dir);
-      }else if(name.startsWith('@')) {
+      } else if (name.startsWith("@")) {
         const dir = name.substring(1);
         // 执行事件对应的函数
-        this.eventHander(node, value, dir)
+        this.eventHander(node, value, dir);
       }
     });
   }
@@ -124,6 +131,10 @@ class Compile {
     const fn = this[dir + "Updater"];
     // 默认渲染一次结果
     fn && fn(node, this.$vm[key]);
+    // 创建 watcher 实例，回调函数的作用和上一行一样，更新模板。
+    new Watcher(this.$vm, key, (val) => {
+      fn && fn(node, val);
+    });
   }
 
   // v-text
@@ -139,7 +150,7 @@ class Compile {
   // v-model
   model(node, key) {
     this.update(node, key, "model");
-    this.modelHander(node, key)
+    this.modelHander(node, key);
   }
 
   // 更新输入框类型
@@ -155,8 +166,47 @@ class Compile {
   }
 
   // 监听事件执行方法
-  eventHander (node, key, event) {
+  eventHander(node, key, event) {
     const fn = this.$vm[key];
-    fn && node.addEventListener(event, fn.bind(this.$vm))
+    fn && node.addEventListener(event, fn.bind(this.$vm));
+  }
+}
+
+// 管理依赖，执行更新
+class Watcher {
+  // vm: vue实例
+  // key: data中对应的 key 名称
+  // fn: 更新 dom 的回调
+  constructor(vm, key, fn) {
+    this.$vm = vm;
+    this.$key = key;
+    this.$fn = fn;
+
+    // 建立 dep 和 watcher 之间的关系
+    Dep.target = this;
+    this.$vm[this.$key]; // 读一下 key 的值触发其 getter
+    Dep.target = null;
+  }
+
+  // 更新函数，由 Dep 调用
+  update() {
+    this.$fn.call(this.$vm, this.$vm[this.$key]);
+  }
+}
+
+// 管理多个 watcher 实例，当对应 key 发生变化时，通知他们更新
+class Dep {
+  constructor() {
+    this.deps = [];
+  }
+
+  // 收集 watcher
+  addDep(watcher) {
+    this.deps.push(watcher);
+  }
+
+  // 通知 watcher 更新模板
+  notify() {
+    this.deps.forEach((w) => w.update());
   }
 }
