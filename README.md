@@ -1,6 +1,6 @@
 # laboratory
 
-实验、测试代码。具体代码查看对应分支。
+具体代码查看对应分支。
 
 ## PlugIn
 
@@ -12,3 +12,7 @@
 - [vue-router简单实现hash模式](https://github.com/haiweilian/laboratory/tree/Vue%40vue-router-hash-simple-implementation)
 - [vue-router简单实现history模式](https://github.com/haiweilian/laboratory/tree/Vue%40vue-router-history-simple-implementation)
 - [vue简单实现](https://github.com/haiweilian/laboratory/tree/Vue%40vue-simple-implementation)
+
+## React
+
+- [redux简单实现](https://github.com/haiweilian/laboratory/tree/React%40redux-simple-imp)
