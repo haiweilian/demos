@@ -1,18 +1,18 @@
 # laboratory
 
-具体代码查看对应分支。
+实验、练习、测试代码。
 
 ## PlugIn
 
-- [axios基础封装、全局Loading](https://github.com/haiweilian/laboratory/tree/PlugIn%40axios-global-config)
+- [axios基础封装、全局Loading](./PlugIn/axios-global-config)
 
 ## Vue
 
-- [vuex简单实现](https://github.com/haiweilian/laboratory/tree/Vue%40vuex-simple-implementation)
-- [vue-router简单实现hash模式](https://github.com/haiweilian/laboratory/tree/Vue%40vue-router-hash-simple-implementation)
-- [vue-router简单实现history模式](https://github.com/haiweilian/laboratory/tree/Vue%40vue-router-history-simple-implementation)
-- [vue简单实现](https://github.com/haiweilian/laboratory/tree/Vue%40vue-simple-implementation)
+- [vue简单实现](./Vue/vue-simple-imp)
+- [vuex简单实现](./Vue/vuex-simple-imp)
+- [vue-router简单实现hash模式](./Vue/vue-router-hash-simple-imp)
+- [vue-router简单实现history模式](./Vue/vue-router-history-simple-imp)
 
 ## React
 
-- [redux简单实现](https://github.com/haiweilian/laboratory/tree/React%40redux-simple-imp)
+- [redux简单实现](./React/redux-simple-imp)

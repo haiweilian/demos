@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vue简单实现</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>{{counter}}</div>
+      <div v-text="counter">v-text</div>
+      <div v-html="desc"></div>
+      <div>
+        <button @click="firstBlood">点我点我</button>
+        <button @dblclick="firstBlood">双击我双击我</button>
+      </div>
+      <div>
+        <input v-model="name" type="text"/>
+        1、<span>{{name}}</span>
+        2、<span>{{name}}</span>
+      </div>
+    </div>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script> -->
+    <script src="./vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: "#app",
+        data: {
+          counter: 1,
+          desc: '<span style="color:red">desc</span>',
+          name: "11111",
+        },
+        methods: {
+          firstBlood() {
+            this.doubleKill();
+          },
+          doubleKill() {
+            this.counter = 0;
+            alert("double kill");
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
