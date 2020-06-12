@@ -1,6 +1,6 @@
 # laboratory
 
-实验、练习、测试代码。
+实验、练习、测试代码。[对应的文章、查看对应分类](https://github.com/haiweilian/blog)
 
 ## PlugIn
 
