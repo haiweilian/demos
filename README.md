@@ -2,10 +2,6 @@
 
 实验、练习、测试代码。[对应的文章、查看对应分类](https://github.com/haiweilian/blog)
 
-## PlugIn
-
-- [axios基础封装、全局Loading](./PlugIn/axios-global-config)
-
 ## Vue
 
 - [vue简单实现](./Vue/vue-simple-imp)
@@ -18,3 +14,7 @@
 - [redux简单实现](./React/redux-simple-imp)
 - [react-redux简单实现](./React/react-redux-simple-imp)
 - [react-router简单实现](./React/react-router-simple-imp)
+
+## PlugIn
+
+- [axios基础封装、全局Loading](./PlugIn/axios-global-config)
