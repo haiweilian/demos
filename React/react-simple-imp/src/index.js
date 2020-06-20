@@ -1,17 +1,55 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// import React, {Component, useState} from "react";
+// import ReactDOM from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+import React from "./react/";
+import ReactDOM, { useState } from "./react/react-dom";
+import Component from "./react/Component";
+import "./index.css";
+
+function FunctionComponent({ name }) {
+  const [count, setCount] = useState(0);
+  return (
+    <div className="border">
+      {name}
+      <button onClick={() => setCount(count + 1)}>click add:{count}</button>
+
+      <div className="border">
+        {count % 2 ? (
+          <button
+            onClick={() => {
+              console.log("omg"); //sy-log
+            }}
+          >
+            click
+          </button>
+        ) : (
+          <div>omg</div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+class ClassComponent extends Component {
+  static defaultProps = {
+    color: "pink",
+  };
+  render() {
+    return (
+      <div className="border">
+        <p className={this.props.color}>color</p>
+        {this.props.name}
+      </div>
+    );
+  }
+}
+
+const jsx = (
+  <div className="border">
+    <p>React</p>
+    <FunctionComponent name="FunctionComponent" />
+    <ClassComponent name="ClassComponent" />
+  </div>
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(jsx, document.getElementById("root"));
