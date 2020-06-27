@@ -11,11 +11,11 @@
 
 ## React
 
-- [react井字棋以及扩展的功能](./React/react-tic-tac-toe)
 - [redux简单实现](./React/redux-simple-imp)
 - [react简单实现](./React/react-simple-imp)
 - [react-redux简单实现](./React/react-redux-simple-imp)
 - [react-router简单实现](./React/react-router-simple-imp)
+- [react井字棋以及扩展的功能](./React/react-tic-tac-toe)
 
 ## PlugIn
 
