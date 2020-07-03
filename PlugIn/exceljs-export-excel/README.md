@@ -11,7 +11,7 @@
 npm install
 ```
 
-开启本地服务
+开启本地服务
 
 ```sh
 npm run server
