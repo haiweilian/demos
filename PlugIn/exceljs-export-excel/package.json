@@ -1,0 +1,17 @@
+{
+  "name": "exceljs-export-excel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "./node_modules/.bin/http-server -c-1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "exceljs": "^4.1.0",
+    "file-saver": "^2.0.2",
+    "http-server": "^0.12.3"
+  }
+}

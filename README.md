@@ -1,6 +1,6 @@
 # laboratory
 
-实验、练习、测试代码。[对应的文章、查看对应分类](https://github.com/haiweilian/blog)
+实验、练习、测试。[对应的文章、查看对应分类](https://github.com/haiweilian/blog)
 
 ## Vue
 
@@ -20,3 +20,4 @@
 ## PlugIn
 
 - [axios基础封装、全局Loading](./PlugIn/axios-global-config)
+- [exceljs前端导出excel并自定义样式](./PlugIn/exceljs-export-excel)
