@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>父页面跨域代理的IFRAME</title>
+</head>
+<body>
+    <script>
+        console.log(window.location.search)
+        console.log(window.parent.parent.document)
+
+        const color = window.location.search.split('=')[1]
+        const doc = window.parent.parent.document
+
+        doc.querySelector('h1').style.color = color
+    </script>
+</body>
+</html>
