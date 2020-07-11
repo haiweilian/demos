@@ -1,10 +1,7 @@
-# laboratory
+# 实验和学习大前端技术栈的源码
 
-实验、练习、测试。[对应的文章、查看对应分类](https://github.com/haiweilian/blog)
-
-## GITEE
-
-[gitee镜像仓库](https://gitee.com/haiweilian/laboratory)
+- [对应的文章](https://github.com/haiweilian/blog)
+- [gitee镜像仓库](https://gitee.com/haiweilian/laboratory)
 
 ## Vue
 
@@ -25,6 +22,7 @@
 
 - [cli工具实现思路](./NodeJs/cli-tool-thinking)
 - [koa简单实现](./NodeJs/cli-tool-thinking)
+- [cors跨域方案实践](./NodeJs/cors-solution-test)
 
 ## JavaScript
 
