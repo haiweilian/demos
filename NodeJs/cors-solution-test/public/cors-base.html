@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>简单跨域请求测试</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      axios.defaults.baseURL = "http://localhost:4001";
+      // 简单 get 请求
+      axios.get("/api/user");
+      // 简单 post 请求
+      axios.post("/api/user");
+    </script>
+  </body>
+</html>
