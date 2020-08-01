@@ -7,8 +7,7 @@
 
 - [vue简单实现](./Vue/vue-simple-imp)
 - [vuex简单实现](./Vue/vuex-simple-imp)
-- [vue-router简单实现hash模式](./Vue/vue-router-hash-simple-imp)
-- [vue-router简单实现history模式](./Vue/vue-router-history-simple-imp)
+- [vue-router简单实现](./Vue/vue-router-simple-imp)
 
 ## React
 
