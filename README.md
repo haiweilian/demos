@@ -29,6 +29,10 @@
 
 - [iframe跨域通信方式](./JavaScript/iframe-cross-communication)
 
+## Tools
+
+- [webpack自定义loader](./Tools/webpack-custom-loader)
+
 ## PlugIn
 
 - [axios基础封装、全局Loading](./PlugIn/axios-global-config)
