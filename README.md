@@ -34,6 +34,7 @@
 - [webpack自定义loader](./Tools/webpack-custom-loader)
 - [webpack自定义plugin](./Tools/webpack-custom-plugin)
 - [webpack多页面打包通用方案](./Tools/webpack-build-mpa)
+- [webpack打包原理分析](./Tools/webpack-packing-principle)
 
 ## PlugIn
 

@@ -1,0 +1,22 @@
+{
+  "name": "webpack-packing-principle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack",
+    "webpack:my": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/parser": "^7.11.3",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/traverse": "^7.11.0"
+  }
+}
