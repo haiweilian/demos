@@ -45,6 +45,7 @@
 
 - [axios基础封装、全局Loading](./PlugIn/axios-global-config)
 - [exceljs前端导出excel并自定义样式](./PlugIn/exceljs-export-excel)
+- [undo-manager撤销恢复异步数据管理](./PlugIn/undo-redo-async-manager)
 
 ## Server
 
