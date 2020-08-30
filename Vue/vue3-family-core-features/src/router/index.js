@@ -22,14 +22,6 @@ const routes = [
     component: () => import('../views/TemplateRefs.vue')
   },
   {
-    path: '/ReactivityUtilities',
-    component: () => import('../views/ReactivityUtilities.vue')
-  },
-  {
-    path: '/AdvancedReactivityAPIs',
-    component: () => import('../views/AdvancedReactivityAPIs.vue')
-  },
-  {
     path: '/RouterNext',
     component: () => import('../views/RouterNext.vue')
   },

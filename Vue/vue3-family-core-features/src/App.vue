@@ -1,13 +1,11 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/ReactivityApis">响应性系统Todo</router-link> |
+      <router-link to="/ReactivityApis">响应性系统TodoMv</router-link> |
       <router-link to="/LifecycleHooks">生命周期</router-link> |
       <router-link to="/DependencyInjection">依赖注入</router-link> |
       <router-link to="/TemplateRefs">模板Refs</router-link> |
-      <router-link to="/ReactivityUtilities">工具集</router-link> |
-      <router-link to="/AdvancedReactivityAPIs">高级响应式系统</router-link> |
-      <router-link to="/RouterNext">Router Next</router-link> |
+      <router-link to="/RouterNext?id=1">Router Next</router-link> |
       <router-link to="/VuexNext">Vuex Next</router-link>
     </div>
     <router-view />
