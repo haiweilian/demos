@@ -1,4 +1,4 @@
-# 实验和学习大前端技术栈的源码
+# 实验和探索大前端技术栈的源码
 
 - [对应的文章](https://github.com/haiweilian/blog)
 - [gitee镜像仓库](https://gitee.com/haiweilian/laboratory)
@@ -17,7 +17,7 @@
 - [react-redux简单实现](./React/react-redux-simple-imp)
 - [react-router简单实现](./React/react-router-simple-imp)
 - [react井字棋以及扩展的功能](./React/react-tic-tac-toe)
-- [react-native学习示例](./React/react-native-study-demo)
+- [react-native体验示例](./React/react-native-study-demo)
 
 ## NodeJs
 
@@ -33,8 +33,8 @@
 
 ## Dart
 
-- [dart学习示例](./Dart/dart_study_demo)
-- [flutter学习示例](./Dart/flutter_study_demo)
+- [dart体验示例](./Dart/dart_study_demo)
+- [flutter体验示例](./Dart/flutter_study_demo)
 
 ## Tools
 
