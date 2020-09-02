@@ -9,7 +9,7 @@
 - [vuex简单实现](./Vue/vuex-simple-imp)
 - [vue-router简单实现](./Vue/vue-router-simple-imp)
 - [vue3生态核心特性](./Vue/vue3-family-core-features)
-- [vue3实现基于Proxy的响应式原理](./Vue/vue3-proxy-reactive)
+- [vue3基于Proxy实现响应式原理](./Vue/vue3-proxy-reactive)
 
 ## React
 
@@ -18,11 +18,11 @@
 - [react-redux简单实现](./React/react-redux-simple-imp)
 - [react-router简单实现](./React/react-router-simple-imp)
 - [react井字棋以及扩展的功能](./React/react-tic-tac-toe)
-- [react-native体验示例](./React/react-native-study-demo)
+- [react-native基础用法与示例](./React/react-native-study-demo)
 
 ## NodeJs
 
-- [cli工具实现思路](./NodeJs/cli-tool-thinking)
+- [cli工具实现](./NodeJs/cli-tool-thinking)
 - [koa简单实现](./NodeJs/koa-simple-imp)
 - [cors跨域方案实践](./NodeJs/cors-solution-test)
 - [cluster多进程守护](./NodeJs/cluster-worker-process)
@@ -35,8 +35,8 @@
 
 ## Dart
 
-- [dart体验示例](./Dart/dart_study_demo)
-- [flutter体验示例](./Dart/flutter_study_demo)
+- [dart基础用法与示例](./Dart/dart_study_demo)
+- [flutter基础用法与示例](./Dart/flutter_study_demo)
 
 ## Tools
 
