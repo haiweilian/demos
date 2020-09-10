@@ -63,20 +63,13 @@ export default {
 
     // 立即执行传入的一个函数，并响应式追踪其依赖，并在其依赖变更时重新运行该函数。
     watchEffect(() => {
-      window.localStorage.setItem('todos', JSON.stringify(state.todos))
+      console.log('watchEffect', state.todos.length)
     })
 
-    // 监听不了对象？？？
-    watch(
-      () => state.todos,
-      value => {
-        console.log(value)
-        window.localStorage.setItem('todos', JSON.stringify(state.todos))
-      },
-      {
-        depp: true
-      }
-    )
+    // 监听值与vue2一致
+    watch(state.todos, (val) => {
+      console.log('watch', val)
+    })
 
     const remaining = computed(() => {
       return state.todos.filter(todo => !todo.completed).length

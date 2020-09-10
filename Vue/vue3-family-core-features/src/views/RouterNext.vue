@@ -8,9 +8,18 @@
   </div>
 </template>
 <script>
-import { useRouter, useRoute } from 'vue-router'
+import { useRouter, useRoute, onBeforeRouteLeave } from 'vue-router'
 export default {
   setup() {
+    onBeforeRouteLeave((to, from, next) => {
+      const is = confirm('确认离开吗？')
+      if(is) {
+        next()
+      }else {
+        next(false)
+      }
+    })
+
     console.log('useRoute', useRoute())
     console.log('useRouter', useRouter())
     const route = useRoute()
