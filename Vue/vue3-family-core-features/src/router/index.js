@@ -22,6 +22,14 @@ const routes = [
     component: () => import('../views/TemplateRefs.vue')
   },
   {
+    path: '/Teleport',
+    component: () => import('../views/Teleport.vue')
+  },
+  {
+    path: '/MultipleModel',
+    component: () => import('../views/MultipleModel.vue')
+  },
+  {
     path: '/RouterNext',
     component: () => import('../views/RouterNext.vue')
   },
