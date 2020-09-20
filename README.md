@@ -55,6 +55,7 @@
 - [axios 基础封装、全局 Loading](./PlugIn/axios-global-config)
 - [exceljs 前端导出 excel 并自定义样式](./PlugIn/exceljs-export-excel)
 - [undo-manager 撤销恢复异步数据管理](./PlugIn/undo-redo-async-manager)
+- [taggd、leader-line 创建标记和指引连接线](./PlugIn/taggd-leader-line-marker)
 
 ## Server
 
