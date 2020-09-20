@@ -49,6 +49,7 @@
 - [webpack 自定义 plugin](./Tools/webpack-custom-plugin)
 - [webpack 多页面打包通用方案](./Tools/webpack-build-mpa)
 - [webpack 打包原理分析](./Tools/webpack-packing-principle)
+- [rollup 通用模块打包方案](./Tools/rollup-module-lib)
 
 ## PlugIn
 
