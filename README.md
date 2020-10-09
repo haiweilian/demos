@@ -33,16 +33,6 @@
 - [ECMA 新特性实练](./JavaScript/ecma-feature-practice)
 - [iframe 跨域通信方式](./JavaScript/iframe-cross-communication)
 
-## Mini
-
-- [weapp 扫码识别图书信息](./Mini/mini-weapp-book)
-- [uniapp 拍照识别垃圾分类](./Mini/mini-uni-trash)
-
-## Dart
-
-- [dart 基础用法与示例](./Dart/dart_study_demo)
-- [flutter 基础用法与示例](./Dart/flutter_study_demo)
-
 ## Tools
 
 - [webpack 自定义 loader](./Tools/webpack-custom-loader)
@@ -57,6 +47,16 @@
 - [exceljs 前端导出 excel 并自定义样式](./PlugIn/exceljs-export-excel)
 - [undo-manager 撤销恢复异步数据管理](./PlugIn/undo-redo-async-manager)
 - [taggd、leader-line 创建标记和指引连接线](./PlugIn/taggd-leader-line-marker)
+
+## Mini
+
+- [weapp 扫码识别图书信息](./Mini/mini-weapp-book)
+- [uniapp 拍照识别垃圾分类](./Mini/mini-uni-trash)
+
+## Dart
+
+- [dart 基础用法与示例](./Dart/dart_study_demo)
+- [flutter 基础用法与示例](./Dart/flutter_study_demo)
 
 ## Server
 
