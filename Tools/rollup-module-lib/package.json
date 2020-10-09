@@ -1,15 +1,17 @@
 {
   "name": "rollup-module-lib",
+  "space": "Lib",
   "version": "1.0.0",
-  "main": "dist/lib.umd.js",
-  "module": "dist/lib.esm.js",
+  "main": "dist/rollup-module-lib.js",
+  "module": "dist/rollup-module-lib.esm.js",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
     "@rollup/plugin-babel": "^5.2.1",
     "@rollup/plugin-commonjs": "^11.0.1",
     "@rollup/plugin-node-resolve": "^7.0.0",
-    "rollup": "^2.12.1"
+    "rollup": "^2.12.1",
+    "rollup-plugin-uglify": "^6.0.4"
   },
   "scripts": {
     "build": "rollup -c",
