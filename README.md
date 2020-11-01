@@ -47,6 +47,7 @@
 - [exceljs 前端导出 excel 并自定义样式](./PlugIn/exceljs-export-excel)
 - [undo-manager 撤销恢复异步数据管理](./PlugIn/undo-redo-async-manager)
 - [taggd、leader-line 创建标记和指引连接线](./PlugIn/taggd-leader-line-marker)
+- [chrome 插件(扩展)开发](./PlugIn/chrome-plugin-demo)
 
 ## Mini
 
