@@ -30,7 +30,6 @@
 
 ## JavaScript
 
-- [ecma 新特性实练](./JavaScript/ecma-feature-practice)
 - [iframe 跨域通信方式](./JavaScript/iframe-cross-communication)
 
 ## Tools
