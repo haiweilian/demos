@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async和defer</title>
+  </head>
+  <body>
+    <script src="./defer.js"></script>
+    <script src="./async.js"></script>
+    <script src="./default.js"></script>
+    <!-- 以下可以看出：加载顺序是固定的 -->
+    <!-- defer async default -->
+    <!-- defer async default -->
+
+    <script defer src="./defer.js"></script>
+    <script async src="./async.js"></script>
+    <script src="./default.js"></script>
+    <!-- 以下可以看出：async 的顺序是不固定的，defer 一直在 default 之后 -->
+    <!-- async default defer-->
+    <!-- default defer async-->
+    <!-- default async defer-->
+  </body>
+</html>

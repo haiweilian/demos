@@ -1,7 +1,19 @@
 # 实验和探索大前端技术栈的源码
 
 - [对应的文章](https://github.com/haiweilian/blog)
-- [gitee 镜像仓库](https://gitee.com/haiweilian/laboratory)
+
+## JavaScript
+
+- [红宝书笔记系列之实战案例](./JavaScript/red-book)
+- [iframe 跨域通信方式](./JavaScript/iframe-cross-communication)
+
+## NodeJs
+
+- [cli 工具实现](./NodeJs/cli-tool-thinking)
+- [koa 简单实现](./NodeJs/koa-simple-imp)
+- [cors 跨域方案实践](./NodeJs/cors-solution-test)
+- [cluster 多进程守护](./NodeJs/cluster-worker-process)
+- [egg 更加实践模板](./NodeJs/egg-practice-template)
 
 ## Vue
 
@@ -19,18 +31,6 @@
 - [react-router 简单实现](./React/react-router-simple-imp)
 - [react 井字棋以及扩展的功能](./React/react-tic-tac-toe)
 - [react-native 基础用法与示例](./React/react-native-study-demo)
-
-## NodeJs
-
-- [cli 工具实现](./NodeJs/cli-tool-thinking)
-- [koa 简单实现](./NodeJs/koa-simple-imp)
-- [cors 跨域方案实践](./NodeJs/cors-solution-test)
-- [cluster 多进程守护](./NodeJs/cluster-worker-process)
-- [egg 更加实践模板](./NodeJs/egg-practice-template)
-
-## JavaScript
-
-- [iframe 跨域通信方式](./JavaScript/iframe-cross-communication)
 
 ## Tools
 
@@ -60,4 +60,5 @@
 
 ## Server
 
+- [nginx 常用配置示例](./Server/nginx-config-demos)
 - [docker 常用配置示例](./Server/docker-config-demos)
