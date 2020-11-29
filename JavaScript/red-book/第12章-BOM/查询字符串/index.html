@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // location.search = "?id=1&name=2"
+      function getQueryString() {
+        let qs = location.search.length > 0 ? location.search.substring(1) : "";
+        let args = {};
+        for (let item of qs.split("&").map((kv) => kv.split("="))) {
+          let name = decodeURIComponent(item[0]);
+          let value = decodeURIComponent(item[1]);
+          args[value] = name;
+        }
+        return args;
+      }
+      console.log(getQueryString()); // {1: "id", 2: "name"}
+    </script>
+    <script>
+      // location.search = "?id=1&name=2"
+      let searchParams = new URLSearchParams(location.search);
+      console.log(searchParams.get("id")); // 1
+      searchParams.set("id", "11");
+      console.log(searchParams.get("id")); // 11
+      searchParams.delete("id");
+      console.log(searchParams.get("id")); // null
+    </script>
+  </body>
+</html>
