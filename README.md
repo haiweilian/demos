@@ -4,7 +4,7 @@
 
 ## JavaScript
 
-- [红宝书笔记系列实践源码](./JavaScript/red-book)
+- [红宝书之初读笔记系列](./JavaScript/red-book)
 - [iframe 跨域通信方式](./JavaScript/iframe-cross-communication)
 
 ## NodeJs
