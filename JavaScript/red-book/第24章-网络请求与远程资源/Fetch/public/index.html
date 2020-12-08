@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      fetch("/api", {
+        method: "GET",
+      }).then((response) => {
+        // 获取 TEXT 格式
+        response.text().then((text) => {
+          console.log(text); // hello world
+        });
+      });
+
+      fetch("/api/json", {
+        method: "POST",
+      }).then((response) => {
+        // 获取 JSON 格式
+        response.json().then((text) => {
+          console.log(text); // {hello: "world"}
+        });
+      });
+    </script>
+  </body>
+</html>

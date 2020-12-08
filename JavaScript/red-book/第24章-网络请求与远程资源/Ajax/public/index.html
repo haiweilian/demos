@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 创建 XHR 对象
+      let xhr = new XMLHttpRequest();
+      // 请求阶段变化 readyState 表示在那个阶段
+      // 0 = 未初始化 ; 1 = 已打开 "xhr.open" ; 2 = 已发送 "xhr.send" ; 3 = 接收中 ; 4 = 完成
+      xhr.onreadystatechange = function (event) {
+        console.log(xhr);
+        if (xhr.readyState === 4) {
+          console.log(xhr.response); // hello world
+        }
+      };
+      // 发送定义好的请求
+      xhr.open("get", "/api", true);
+      xhr.send(null);
+    </script>
+  </body>
+</html>
