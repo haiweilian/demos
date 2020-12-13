@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #upload {
+      width: 100px;
+      height: 100px;
+      line-height: 100px;
+      font-size: 50px;
+      text-align: center;
+      border: 1px solid #cccccc;
+    }
+  </style>
+  <body>
+    <div id="upload">+</div>
+    <img id="image" src="" alt="" />
+    <script>
+      // 进入 目标元素 触发
+      upload.addEventListener("dragenter", function (event) {
+        event.preventDefault();
+        upload.style.background = "red";
+      });
+
+      // 在 目标元素 持续触发
+      upload.addEventListener("dragover", function (event) {
+        event.preventDefault();
+      });
+
+      // 离开 目标元素 触发
+      upload.addEventListener("dragleave", function (event) {
+        event.preventDefault();
+        upload.style.background = "";
+      });
+
+      // 放置在 目标元素 触发
+      upload.addEventListener("drop", function (event) {
+        event.preventDefault();
+        upload.style.background = "";
+
+        console.log(event.dataTransfer.files); // [ File ]
+
+        let file = event.dataTransfer.files[0];
+        let reader = new FileReader();
+
+        if (/image/.test(file.type)) {
+          reader.readAsDataURL(file);
+        }
+
+        reader.onload = function () {
+          image.src = reader.result;
+          console.log(reader.result); // data:image/png;base64,iVBORw0KGg
+        };
+      });
+    </script>
+  </body>
+</html>

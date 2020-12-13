@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div style="height: 2000px">
+      <button id="button" style="margin-top: 1000px">出现在可视区域</button>
+    </div>
+    <script>
+      // 窗口滚动后元素的顶部与视口顶部对齐
+      button.scrollIntoView(true);
+      button.scrollIntoView({ block: "start" });
+
+      // 窗口滚动后元素的底部部与视口底部对齐
+      button.scrollIntoView(false);
+      button.scrollIntoView({ block: "end" });
+
+      button.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+    </script>
+  </body>
+</html>

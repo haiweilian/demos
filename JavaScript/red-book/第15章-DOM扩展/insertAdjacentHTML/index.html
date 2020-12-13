@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul id="ul">
+      <li id="li"></li>
+    </ul>
+    <script>
+      li.insertAdjacentHTML("beforebegin", "<li>插入当前元素的前面，作为前一个同胞节点。</li>");
+      console.log(ul.innerHTML);
+      // <li>插入当前元素的前面，作为前一个同胞节点。</li>
+      // <li id="li"></li>
+    </script>
+  </body>
+</html>

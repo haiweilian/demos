@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    #box:after {
+      font-size: 30px;
+    }
+  </style>
+  <body>
+    <div id="box"></div>
+    <script>
+      let box = document.querySelector("#box");
+      let computedStyle = document.defaultView.getComputedStyle(box, null);
+      console.log(computedStyle); // CSSStyleDeclaration { width, height, color, margin, ... }
+      console.log(computedStyle.width); // 100px
+      console.log(computedStyle.height); // 100px
+      console.log(computedStyle.color); // rgb(0, 0, 0) 不设置也会获取默认的
+    </script>
+    <script>
+      let boxAfter = document.querySelector("#box");
+      let computedStyleAfter = document.defaultView.getComputedStyle(box, ":after");
+      console.log(computedStyleAfter.fontSize); // 30px
+    </script>
+  </body>
+</html>

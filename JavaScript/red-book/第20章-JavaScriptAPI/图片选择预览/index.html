@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="upload" type="file" value="选择图片" />
+    <img id="image" src="" alt="" />
+    <script>
+      upload.addEventListener("change", (event) => {
+        console.log(event.target.files); // [ File ]
+
+        let file = event.target.files[0];
+        let reader = new FileReader();
+
+        if (/image/.test(file.type)) {
+          reader.readAsDataURL(file);
+        }
+
+        reader.onload = function () {
+          image.src = reader.result;
+          console.log(reader.result); // data:image/png;base64,iVBORw0KGg
+        };
+      });
+    </script>
+  </body>
+</html>

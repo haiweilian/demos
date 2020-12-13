@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 创建 MutationObserver 实例，异步执行注册的回调
+      let observer = new MutationObserver((mutationRecords) => {
+        console.log(mutationRecords[0]); // {type: "attributes", target: body.foe3e3o, ...}
+      });
+
+      // 设置观察对象
+      observer.observe(document.body, {
+        subtree: true,
+        attributes: true,
+        // ...
+      });
+      document.body.className = "foo";
+
+      // 取消观察对象
+      setTimeout(() => {
+        observer.disconnect();
+        document.body.className = "bar";
+        // (没有日志输出)
+      });
+
+      // 清空队列
+      setTimeout(() => {
+        observer.takeRecords();
+      });
+    </script>
+  </body>
+</html>

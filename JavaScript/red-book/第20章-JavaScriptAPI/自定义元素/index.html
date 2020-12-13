@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <x-foo>1</x-foo>
+    <x-foo>2</x-foo>
+    <script>
+      class FooElement extends HTMLElement {
+        constructor() {
+          super();
+          console.log(this); // x-foo：this 指向这个组件
+        }
+      }
+      customElements.define("x-foo", FooElement);
+    </script>
+  </body>
+</html>

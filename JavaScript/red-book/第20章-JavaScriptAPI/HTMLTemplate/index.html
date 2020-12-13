@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <template id="tpl">
+      <h1>HTMLTemplate</h1>
+    </template>
+    <!-- 在浏览器审查元素可以看到 -->
+    <!-- <template id="tpl">
+      #document-fragment
+        <h1>HTMLTemplate</h1>
+    </template> -->
+    <script>
+      tpl = document.querySelector("#tpl").content;
+      document.body.appendChild(tpl);
+    </script>
+  </body>
+</html>

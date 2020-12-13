@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box" style="padding: 100px; background: red">
+      <button id="inner">点击</button>
+    </div>
+    <script>
+      box.addEventListener(
+        "click",
+        () => {
+          console.log("box");
+        },
+        false
+      );
+      inner.addEventListener(
+        "click",
+        () => {
+          console.log("inner");
+        },
+        false
+      );
+    </script>
+    <script>
+      box.addEventListener(
+        "click",
+        () => {
+          console.log("box");
+        },
+        true
+      );
+      inner.addEventListener(
+        "click",
+        () => {
+          console.log("inner");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

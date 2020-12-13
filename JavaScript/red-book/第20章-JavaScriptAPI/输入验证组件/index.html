@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 定义组件模板 -->
+    <template id="x-input-tpl">
+      <input value="" placeholder="请输入数字" />
+    </template>
+    <!-- 使用输入组件 -->
+    <x-input id="input1"></x-input>
+    <x-input id="input2"></x-input>
+    <script>
+      class xInput extends HTMLElement {
+        constructor() {
+          super();
+          // 获取组件模板
+          let tpl = document.querySelector("#x-input-tpl").content;
+          // 添加影子DOM
+          let root = this.attachShadow({ mode: "open" }).appendChild(tpl.cloneNode(true));
+          // 保存输入元素
+          this.$el = this.shadowRoot.querySelector("input");
+          // 监听数据变化
+          this.$el.addEventListener("input", (event) => {
+            this.value = event.target.value;
+          });
+        }
+        get value() {
+          return this.$el.value;
+        }
+        set value(val = "") {
+          this.$el.value = val.replace(/[^0-9]/g, "");
+        }
+      }
+      customElements.define("x-input", xInput);
+    </script>
+    <script>
+      // 获取组件并设置值和取值
+      let input1 = document.querySelector("#input1");
+      input1.value = "111.ss";
+      console.log(input1.value); // 111
+
+      // 获取组件并设置值和取值
+      let input2 = document.querySelector("#input2");
+      input2.value = "222.ss";
+      console.log(input2.value); // 222
+    </script>
+  </body>
+</html>

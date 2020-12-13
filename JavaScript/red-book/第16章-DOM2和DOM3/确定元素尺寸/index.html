@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    #box {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+  </style>
+  <body>
+    <div id="box"></div>
+    <script>
+      let DOMRect = box.getBoundingClientRect();
+      console.log(DOMRect);
+      // {
+      //   top: 100;
+      //   left: 100;
+      //   width: 100;
+      //   height: 100;
+      //   bottom: 200; // top + height
+      //   right: 200; // left + width
+      //   x: 100;
+      //   y: 100;
+      // }
+    </script>
+  </body>
+</html>

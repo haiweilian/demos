@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="box"></div>
+    <!-- 在浏览器审查元素可以看到 -->
+    <!-- <div id="box">
+      #shadow-root (open)
+        <div>ShadowDOM</div>
+    </div> -->
+    <script>
+      let ele = box.attachShadow({ mode: "open" });
+      ele.innerHTML = `
+        <div>ShadowDOM</div>
+        <style> * { color: red; } <\/style>
+        <script> var num = 0; <\/script>
+      `;
+      console.log(window.num); // undefined
+    </script>
+  </body>
+</html>
