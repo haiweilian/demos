@@ -36,7 +36,7 @@ for (let i of list) {
 // c
 
 let listr = list[Symbol.iterator]();
-console.log(listr.next()); // { done: false, value: 'a' }
-console.log(listr.next()); // { done: false, value: 'b' }
-console.log(listr.next()); // { done: false, value: 'c' }
-console.log(listr.next()); // { done: true, value: undefined }
+console.log(listr.next()); // { value: 'a', done: false }
+console.log(listr.next()); // { value: 'b', done: false }
+console.log(listr.next()); // { value: 'c', done: false }
+console.log(listr.next()); // { value: undefined, done: true }
