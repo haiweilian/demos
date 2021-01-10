@@ -4,8 +4,8 @@
 
 ## JScript
 
-- [《红宝书之初读笔记系列》](./JavaScript/red-book)
-- [《JavaScript 设计模式与开发实践》](./JavaScript/design-pattern)
+- [红宝书之初读笔记系列](./JavaScript/red-book)
+- [JavaScript 设计模式与开发实践](./JavaScript/design-pattern)
 - [iframe 跨域通信方式](./JavaScript/iframe-cross-communication)
 
 ## Vue
