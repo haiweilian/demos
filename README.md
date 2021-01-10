@@ -1,8 +1,8 @@
-# Laboratory
+# Lab
 
 - [对应的文章](https://github.com/haiweilian/blog)
 
-## JavaScript
+## JScript
 
 - [《红宝书之初读笔记系列》](./JavaScript/red-book)
 - [《JavaScript 设计模式与开发实践》](./JavaScript/design-pattern)
