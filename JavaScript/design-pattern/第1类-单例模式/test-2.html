@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="loginBtn">登录</button>
+    <script>
+      // 把单例的逻辑抽离出来
+      function getSingle(fn) {
+        let result
+        return function () {
+          return result || (result = fn.apply(this, arguments))
+        }
+      }
+
+      // 登录浮框的逻辑
+      function createLoginLayer() {
+        console.log("...登录浮框，只会初始化一次")
+        let div = document.createElement("div")
+        div.innerHTML = "我是登录浮框"
+        div.style.display = "none"
+        document.body.appendChild(div)
+        return div
+      }
+
+      // 事件处理
+      let createSingleLoginLayer = getSingle(createLoginLayer)
+      let loginBtn = document.getElementById("loginBtn")
+      loginBtn.addEventListener("click", function () {
+        let loginLayer = createSingleLoginLayer()
+        loginLayer.style.display = "block"
+      })
+    </script>
+  </body>
+</html>
