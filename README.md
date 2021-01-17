@@ -4,9 +4,9 @@
 
 ## JScript
 
-- [红宝书之初读笔记系列](./JavaScript/red-book)
-- [JavaScript 设计模式与开发实践](./JavaScript/design-pattern)
-- [iframe 跨域通信方式](./JavaScript/iframe-cross-communication)
+- [读书.红宝书之初读笔记系列](./JavaScript/red-book)
+- [读书.设计模式与开发实践](./JavaScript/design-pattern)
+- [Iframe 跨域通信方式](./JavaScript/iframe-cross-communication)
 
 ## Vue
 
@@ -48,6 +48,7 @@
 - [undo-manager 撤销恢复异步数据管理](./PlugIn/undo-redo-async-manager)
 - [taggd、leader-line 创建标记和指引连接线](./PlugIn/taggd-leader-line-marker)
 - [chrome 插件(扩展)开发](./PlugIn/chrome-plugin-demo)
+- [sku 实现多维属性组合查询](./PlugIn/sku-compose-manager)
 
 ## Mini
 

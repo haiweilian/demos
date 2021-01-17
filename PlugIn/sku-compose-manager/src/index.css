@@ -1,0 +1,33 @@
+body {
+  font-size: 12px;
+}
+dt {
+  width: 100px;
+  text-align: right;
+}
+dl {
+  clear: both;
+  overflow: hidden;
+}
+dl.hl {
+  background: #ddd;
+}
+dt,
+dd {
+  float: left;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 10px;
+}
+button {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 4px;
+}
+.disabled {
+  color: #999;
+  border: 1px dashed #666;
+}
+.active {
+  color: red;
+}
