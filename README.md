@@ -33,6 +33,12 @@
 - [react 井字棋以及扩展的功能](./React/react-tic-tac-toe)
 - [react-native 基础用法与示例](./React/react-native-study-demo)
 
+## TScript
+
+- [ts 学习记录之基础语法](./TypeScript/ts-base-study)
+- [ts 学习记录之声明文件](./TypeScript/ts-declare-study)
+- [ts 学习记录之工程配置](./TypeScript/ts-config-study)
+
 ## Tools
 
 - [webpack 自定义 loader](./Tools/webpack-custom-loader)
