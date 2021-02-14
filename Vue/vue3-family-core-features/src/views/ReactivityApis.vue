@@ -61,12 +61,10 @@ export default {
       state.todos.splice(index, 1)
     }
 
-    // 立即执行传入的一个函数，并响应式追踪其依赖，并在其依赖变更时重新运行该函数。
     watchEffect(() => {
       console.log('watchEffect', state.todos.length)
     })
 
-    // 监听值与vue2一致
     watch(state.todos, (val) => {
       console.log('watch', val)
     })

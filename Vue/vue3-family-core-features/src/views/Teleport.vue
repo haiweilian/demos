@@ -1,13 +1,16 @@
 <template>
-  <teleport to="body">
-    <div class="mask"><button>虽然是逻辑写在#app，但是渲染在了 body 后</button></div>
-  </teleport>
-  <teleport to="body">
-    <div class="mask"><button>虽然是逻辑写在#app，但是渲染在了 body 后</button></div>
+  <button @click="disabled = !disabled">切换渲染位置</button>
+  <teleport to="body" :disabled="disabled">
+    <div class="mask"><button>切换内容位置，审查元素查看</button></div>
+    <input type="text">
   </teleport>
 </template>
 <script>
 export default {
-
+  data () {
+    return {
+      disabled: false
+    }
+  }
 }
 </script>

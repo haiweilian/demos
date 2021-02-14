@@ -14,8 +14,7 @@
 - [vue 实现原理分析](./Vue/vue-simple-imp)
 - [vuex 实现原理分析](./Vue/vuex-simple-imp)
 - [vue-router 实现原理分析](./Vue/vue-router-simple-imp)
-- [vue3 生态核心特性](./Vue/vue3-family-core-features)
-- [vue3 基于 Proxy 实现响应式原理](./Vue/vue3-proxy-reactive)
+- [vue3 生态体系核心特性](./Vue/vue3-family-core-features)
 
 ## NodeJs
 

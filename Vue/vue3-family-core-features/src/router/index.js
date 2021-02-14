@@ -26,6 +26,10 @@ const routes = [
     component: () => import('../views/Teleport.vue')
   },
   {
+    path: '/Suspense',
+    component: () => import('../views/Suspense.vue')
+  },
+  {
     path: '/MultipleModel',
     component: () => import('../views/MultipleModel.vue')
   },
