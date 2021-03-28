@@ -1,4 +1,4 @@
-# Lab
+## Lab
 
 - [对应的文章](https://github.com/haiweilian/blog)
 - [码云的镜像](https://gitee.com/haiweilian/laboratory)
@@ -28,12 +28,17 @@
 ## React
 
 - [redux 实现原理分析](./React/redux-simple-imp)
+- [react 实现原理分析](./React/react-simple-imp)
+- [react-redux 实现原理分析](./React/react-redux-simple-imp)
+- [react-router 实现原理分析](./React/react-router-simple-imp)
 - [react 井字棋以及扩展的功能](./React/react-tic-tac-toe)
+- [react-native 基础用法与示例](./React/react-native-study-demo)
 
 ## TScript
 
-- [ts 记录之基础语法](./TypeScript/ts-base-study)
-- [ts 记录之声明文件](./TypeScript/ts-declare-study)
+- [ts 学习记录之基础语法](./TypeScript/ts-base-study)
+- [ts 学习记录之声明文件](./TypeScript/ts-declare-study)
+- [ts 学习记录之工程配置](./TypeScript/ts-config-study)
 
 ## Tools
 
