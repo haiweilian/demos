@@ -5,7 +5,7 @@ export default class ReduxPage extends Component {
   componentDidMount() {
     // 添加订阅，当 state 更新的时候执行回调更新
     this.unsubscribe = store.subscribe(() => {
-      console.log("3、subscribe-更新");
+      // console.log("3、subscribe-更新");
       this.forceUpdate();
     });
   }
@@ -17,7 +17,7 @@ export default class ReduxPage extends Component {
 
   add = () => {
     // 触发更新执行，传递 action
-    console.log("1、action---加");
+    // console.log("1、action---加");
     store.dispatch({
       type: "ADD",
     });
@@ -25,7 +25,7 @@ export default class ReduxPage extends Component {
 
   minus = () => {
     // 触发更新执行, 传递 action
-    console.log("1、action---减");
+    // console.log("1、action---减");
     store.dispatch({
       type: "MINUS",
     });

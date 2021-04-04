@@ -21,7 +21,7 @@
 
 - [cli 工具实现](./NodeJs/cli-tool-thinking)
 - [koa 实现原理分析](./NodeJs/koa-simple-imp)
-- [cors 跨域方案实践](./NodeJs/cors-solution-test)
+- [cors 跨域解决方案实践](./NodeJs/cors-solution-test)
 - [cluster 多进程守护](./NodeJs/cluster-worker-process)
 - [egg 更加实践模板](./NodeJs/egg-practice-template)
 
