@@ -56,8 +56,7 @@ module.exports = class Webpack {
     traverse(ast, {
       ImportDeclaration({ node }) {
         // 获取文件所在的目录路径
-        const newPathName =
-          "./" + path.join(path.dirname(entryFile), node.source.value);
+        const newPathName = "./" + path.join(path.dirname(entryFile), node.source.value);
         yilai[node.source.value] = newPathName;
       },
     });
@@ -76,6 +75,7 @@ module.exports = class Webpack {
       code,
     };
   }
+
   /**
    * 生成文件
    */

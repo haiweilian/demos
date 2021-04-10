@@ -1,0 +1,29 @@
+{
+  "name": "vite-features-base",
+  "version": "0.0.0",
+  "files": ["dist"],
+  "main": "./dist/vite-features-base.umd.js",
+  "module": "./dist/vite-features-base.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vite-features-base.es.js",
+      "require": "./dist/vite-features-base.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^1.3.2",
+    "@vitejs/plugin-vue": "^1.2.1",
+    "@vue/compiler-sfc": "^3.0.5",
+    "sass": "^1.32.8",
+    "vite": "^2.1.5"
+  }
+}
