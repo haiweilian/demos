@@ -1,3 +1,4 @@
+// 导入接口，并使用
 import { StringValidator } from "./StringValidator";
 
 export const numberRegExp = /^[0-9]+$/;

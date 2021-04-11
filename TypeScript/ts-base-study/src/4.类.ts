@@ -59,3 +59,15 @@ class Car extends Run {
     console.log("...run");
   }
 }
+
+// ====== 把类当做接口使用
+class Point2d {
+  x: number;
+  y: number;
+}
+
+interface Point3d extends Point2d {
+  z: number;
+}
+
+let point3d: Point3d = { x: 1, y: 1, z: 1 };

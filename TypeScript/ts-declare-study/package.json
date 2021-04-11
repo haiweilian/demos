@@ -1,0 +1,19 @@
+{
+  "name": "ts-declare-study",
+  "version": "1.0.0",
+  "description": "<https://github.com/zhongsp/TypeScript>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.5"
+  }
+}
