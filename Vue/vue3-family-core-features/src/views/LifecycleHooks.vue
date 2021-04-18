@@ -16,10 +16,14 @@ import {
   onUnmounted,
   onRenderTracked,
   onRenderTriggered,
-  ref
+  ref,
+  getCurrentInstance
 } from 'vue'
 export default {
   setup() {
+    const internalInstance = getCurrentInstance()
+    console.log(internalInstance.appContext)
+
     onBeforeMount(() => {
       console.log('onBeforeMount')
     })
@@ -42,11 +46,11 @@ export default {
     })
 
     // 在 onBeforeUpdate 之前触发，触发更新值时调用
-    onRenderTriggered(e => {
+    onRenderTriggered((e) => {
       console.log('onRenderTriggered', e)
     })
     // 在 onBeforeUpdate 之后 onUpdated 之前触发，追踪依赖时调用
-    onRenderTracked(e => {
+    onRenderTracked((e) => {
       console.log('onRenderTracked', e)
     })
 

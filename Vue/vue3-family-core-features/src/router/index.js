@@ -3,23 +3,23 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    redirect: '/ReactivityApis'
+    redirect: '/ReactivityTodo'
   },
   {
-    path: '/ReactivityApis',
-    component: () => import('../views/ReactivityApis.vue')
+    path: '/ReactivityTodo',
+    component: () => import('../views/ReactivityTodo.vue')
+  },
+  {
+    path: '/ReactivityApi',
+    component: () => import('../views/ReactivityApi.vue')
   },
   {
     path: '/LifecycleHooks',
     component: () => import('../views/LifecycleHooks.vue')
   },
   {
-    path: '/DependencyInjection',
-    component: () => import('../views/DependencyInjection.vue')
-  },
-  {
-    path: '/TemplateRefs',
-    component: () => import('../views/TemplateRefs.vue')
+    path: '/ProvideInject',
+    component: () => import('../views/ProvideInject.vue')
   },
   {
     path: '/Teleport',
@@ -34,11 +34,22 @@ const routes = [
     component: () => import('../views/MultipleModel.vue')
   },
   {
+    path: '/ScriptSetup',
+    component: () => import('../views/ScriptSetup.vue')
+  },
+  {
     path: '/RouterNext',
-    component: () => import('../views/RouterNext.vue')
+    component: () => import('../views/RouterNext.vue'),
+    children: [
+      {
+        path: 'Slot',
+        component: () => import('../views/RouterNext/Slot.vue')
+      }
+    ]
   },
   {
     path: '/VuexNext',
+    name: '/VuexNext',
     component: () => import('../views/VuexNext.vue')
   }
 ]

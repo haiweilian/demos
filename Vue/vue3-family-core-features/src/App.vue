@@ -1,14 +1,15 @@
 <template>
   <div id="nav">
-    <router-link to="/ReactivityApis">响应性系统Todo</router-link> |
+    <router-link to="/ReactivityTodo">响应性Todo</router-link> |
+    <router-link to="/ReactivityApi">响应性API</router-link> |
     <router-link to="/LifecycleHooks">生命周期</router-link> |
-    <router-link to="/DependencyInjection">依赖注入</router-link> |
-    <router-link to="/TemplateRefs">模板Refs</router-link> |
-    <router-link to="/Teleport">内置组件Teleport</router-link> |
-    <router-link to="/Suspense">内置组件Suspense</router-link> |
-    <router-link to="/MultipleModel">多个 v-model 绑定</router-link> |
-    <router-link to="/RouterNext?id=1">Router Next</router-link> |
-    <router-link to="/VuexNext">Vuex Next</router-link>
+    <router-link to="/ProvideInject">Provide/Inject</router-link> |
+    <router-link to="/Teleport">组件Teleport</router-link> |
+    <router-link to="/Suspense">组件Suspense</router-link> |
+    <router-link to="/MultipleModel">多个v-model</router-link> |
+    <router-link to="/ScriptSetup">ScriptSetup</router-link> |
+    <router-link to="/RouterNext?id=1">RouterNext</router-link> |
+    <router-link to="/VuexNext">VuexNext</router-link>
   </div>
   <router-view />
 </template>

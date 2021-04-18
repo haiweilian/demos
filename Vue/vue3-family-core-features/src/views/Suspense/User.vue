@@ -10,15 +10,15 @@ export default {
     const fetchUser = () => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
-          resolve({ name: "Carlo", age: "20" });
+          resolve({ name: 'Carlo', age: '20' })
           //reject("获取信息失败！");
-        }, 3000);
-      });
-    };
+        }, 3000)
+      })
+    }
 
-    const user = await fetchUser();
+    const user = await fetchUser()
 
-    return { user };
-  },
+    return { user }
+  }
 }
 </script>

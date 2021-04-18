@@ -37,7 +37,7 @@ import { reactive, toRefs, computed, watchEffect, watch } from 'vue'
 import useScroll from '../use/scroll'
 import useMouse from '../use/mouse'
 export default {
-  setup() {
+  setup(props, ctx) {
     const state = reactive({
       todos: [],
       newTodo: ''
@@ -56,7 +56,7 @@ export default {
       state.newTodo = ''
     }
 
-    const removeTodo = todo => {
+    const removeTodo = (todo) => {
       var index = state.todos.indexOf(todo)
       state.todos.splice(index, 1)
     }
@@ -70,22 +70,22 @@ export default {
     })
 
     const remaining = computed(() => {
-      return state.todos.filter(todo => !todo.completed).length
+      return state.todos.filter((todo) => !todo.completed).length
     })
 
     const allDone = computed({
-      get: function() {
+      get: function () {
         return remaining.value === 0
       },
-      set: function(value) {
-        state.todos.forEach(function(todo) {
+      set: function (value) {
+        state.todos.forEach(function (todo) {
           todo.completed = value
         })
       }
     })
 
     const removeCompleted = () => {
-      state.todos = state.todos.filter(todo => !todo.completed)
+      state.todos = state.todos.filter((todo) => !todo.completed)
     }
 
     const { top } = useScroll()

@@ -22,7 +22,7 @@ const actions = {
     }
   },
   incrementAsync({ commit }) {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         commit('increment')
         resolve()
@@ -32,7 +32,7 @@ const actions = {
 }
 
 const getters = {
-  evenOrOdd: state => (state.count % 2 === 0 ? 'even' : 'odd')
+  evenOrOdd: (state) => (state.count % 2 === 0 ? 'even' : 'odd')
 }
 
 export default createStore({

@@ -1,7 +1,7 @@
 <template>
-  <p>name: {{name}}</p>
-  <p>firstName: {{firstName}}</p>
-  <p>lastName: {{lastName}}</p>
+  <p>name: {{ name }}</p>
+  <p>firstName: {{ firstName }}</p>
+  <p>lastName: {{ lastName }}</p>
   <user-name v-model="name" v-model:first-name="firstName" v-model:last-name="lastName"></user-name>
 </template>
 <script>
