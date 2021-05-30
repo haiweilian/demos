@@ -13,13 +13,12 @@
 - [Vuex 原理分析，实现响应式的状态管理](./Vue/vuex-simple-imp)
 - [Vue Router 原理分析，实现检测路由变化并匹配组件渲染](./Vue/vue-router-simple-imp)
 - [Vue3 全新生态体系的核心特性探索](./Vue/vue3-family-core-features)
-- [Redux 原理分析，惊叹的中间件机制“函数的合成”](./React/redux-simple-imp)
+- [Redux 原理分析，中间件机制“函数合成”](./React/redux-simple-imp)
 - [React 边学边做实现井字棋以及扩展的功能](./React/react-tic-tac-toe)
 
 ## 全栈开发
 
-- [自定义 CLI 命令行界面，开发一个自己的项目脚手架](./NodeJs/cli-tool-thinking)
-- [Koa 原理分析，小巧而强大的洋葱模型中间件机制](./NodeJs/koa-simple-imp)
+- [Koa 原理分析，中间件机制“洋葱模型”](./NodeJs/koa-simple-imp)
 - [解开 CORS 跨域限制的”四层封印“](./NodeJs/cors-solution-test)
 - [NodeJs 错误处理多进程创建与守护](./NodeJs/cluster-worker-process)
 - [Egg 更加实践模板，集成文档生成、权限认证、数据存储](./NodeJs/egg-practice-template)
@@ -28,6 +27,7 @@
 
 - [TypeScript 学习基础语法和理解类型系统](./TypeScript/ts-base-study)
 - [TypeScript 利用声明文件编写类库声明文件](./TypeScript/ts-declare-study)
+- [TypeScript 深入理解、巧用和高级用法](./TypeScript/ts-deep-dive)
 
 ## 构建工具
 
