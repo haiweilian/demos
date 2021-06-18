@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="exec">执行</button>
+    <div contenteditable style="width: 100px; height: 100px; border: 1px solid red"></div>
+    <script>
+      // 富文本的实现方式，可以给任意元素指定 contenteditable 属性，然后该元素可立即被用户编辑。
+      // 比如以下代码，当选中输入的 "hello" 文本并点击 "执行"，内容就会变成  <h1><b>hello</b></h1>
+      // 更多执行命令查看(富文本交互)
+      exec.onclick = function () {
+        document.execCommand("bold", true, null);
+        document.execCommand("formatblock", true, "h1");
+      };
+    </script>
+  </body>
+</html>
