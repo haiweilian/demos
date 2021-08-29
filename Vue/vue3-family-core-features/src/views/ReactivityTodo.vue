@@ -106,8 +106,10 @@ export default {
   }
 }
 </script>
-<style>
-.header.fixed {
+<style scoped>
+@import 'todomvc-app-css/index.css';
+
+.fixed {
   background: #fff;
   position: fixed;
   top: 0;
@@ -115,5 +117,14 @@ export default {
   right: 0;
   width: 100%;
   z-index: 100;
+}
+
+.todoapp {
+  width: 500px;
+  margin: 130px auto 40px auto;
+}
+
+.todoapp h1 {
+  top: -190px;
 }
 </style>

@@ -1,8 +1,7 @@
 <template>
-  <div>
-    <div><input type="text" v-model="val" />传入一个响应性的值</div>
-    <Inject></Inject>
-  </div>
+  <h3>传入一个响应性的值</h3>
+  <input type="text" v-model="val" />
+  <Inject></Inject>
 </template>
 <script>
 import { provide, ref } from 'vue'

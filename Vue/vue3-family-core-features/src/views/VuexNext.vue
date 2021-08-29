@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div>
     Clicked: {{ count }} times, count is {{ evenOrOdd }}.
     <button @click="increment">+</button>
     <button @click="decrement">-</button>
@@ -17,8 +17,8 @@ export default {
       count: computed(() => store.state.count),
       evenOrOdd: computed(() => store.getters.evenOrOdd),
 
-      increment: () => store.dispatch('increment'),
-      decrement: () => store.dispatch('decrement'),
+      increment: () => store.commit('increment'),
+      decrement: () => store.commit('decrement'),
 
       incrementIfOdd: () => store.dispatch('incrementIfOdd'),
       incrementAsync: () => store.dispatch('incrementAsync')

@@ -49,8 +49,11 @@ const routes = [
   },
   {
     path: '/VuexNext',
-    name: '/VuexNext',
     component: () => import('../views/VuexNext.vue')
+  },
+  {
+    path: '/PiniaNext',
+    component: () => import('../views/PiniaNext.vue')
   }
 ]
 

@@ -1,5 +1,6 @@
 <template>
-  <div>inject 接收到 {{ key }}</div>
+  <h3>接收到</h3>
+  <div>{{ key }}</div>
 </template>
 <script>
 import { inject } from 'vue'

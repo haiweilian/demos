@@ -6,14 +6,15 @@
     "build": "vite build"
   },
   "dependencies": {
-    "todomvc-app-css": "^2.3.0",
-    "vue": "^3.0.11",
+    "pinia": "^2.0.0-rc.4",
+    "todomvc-app-css": "^2.4.1",
+    "vue": "^3.2.0",
     "vue-router": "^4.0.6",
     "vuex": "^4.0.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.1",
-    "@vue/compiler-sfc": "^3.0.11",
-    "vite": "^2.1.5"
+    "@vitejs/plugin-vue": "^1.4.0",
+    "@vue/compiler-sfc": "^3.2.1",
+    "vite": "^2.4.4"
   }
 }

@@ -1,12 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import store from './store'
-import './index.css'
+import store from './store/vuex'
+import { createPinia } from 'pinia'
 
-// eslint-disable-next-line
-let app = createApp(App).use(store).use(router)
+const app = createApp(App)
 
 app.config.globalProperties.size = 'mini'
 
+app.use(store)
+app.use(router)
+app.use(createPinia())
 app.mount('#app')

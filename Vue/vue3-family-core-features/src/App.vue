@@ -9,7 +9,8 @@
     <router-link to="/MultipleModel">多个v-model</router-link> |
     <router-link to="/ScriptSetup">ScriptSetup</router-link> |
     <router-link to="/RouterNext?id=1">RouterNext</router-link> |
-    <router-link to="/VuexNext">VuexNext</router-link>
+    <router-link to="/VuexNext">VuexNext</router-link> |
+    <router-link to="/PiniaNext">PiniaNext</router-link>
   </div>
   <router-view />
 </template>
@@ -29,6 +30,7 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  font-size: 12px;
 }
 
 #nav a.router-link-exact-active {

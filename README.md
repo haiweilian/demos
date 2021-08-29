@@ -28,9 +28,9 @@
 
 - [TypeScript 学习基础语法和理解类型系统](./TypeScript/ts-base-study)
 - [TypeScript 利用声明文件编写类库声明文件](./TypeScript/ts-declare-study)
-- [TypeScript 深入理解、巧用和高级用法](./TypeScript/ts-deep-dive)
+- [TypeScript 深入理解、巧用高级用法](./TypeScript/ts-deep-dive)
 
-## 构建工具
+## 构建工程
 
 - [Webpack 配置、实战、优化、插件扩展等](./Tools/webpack-features-base)
 - [Webpack 模块打包原理分析（解析、编译和生成的过程）](./Tools/webpack-packing-principle)
