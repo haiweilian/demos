@@ -11,7 +11,8 @@ function identityGenerics<T>(arg: T): T {
 }
 // --它的类型是调用的时候传入的,(对应 <T> ，这样看是不是和函数的参数差不多一样的)
 identityGenerics<string>("1");
-identityGenerics<number>(1);
+// --没有传入泛型，会反向推导出 number => function identityGenerics<1>(arg: 1): 1
+identityGenerics(1);
 
 // ====== 泛型类型
 interface GenericIdentityFn<T> {

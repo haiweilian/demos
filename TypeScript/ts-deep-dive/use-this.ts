@@ -1,12 +1,12 @@
-// 如果这个方法显式指定了 this 参数，那么 this 具有该参数的类型。（下例子中 bar）
-let bars = {
+// 如果这个方法显式指定了 this 参数，那么 this 具有该参数的类型。
+let foo = {
   x: "hello",
-  f(this: { message: string }) {
+  f(this: { message: string }, n: number) {
     this; // { message: string }
   },
 };
 
-// 否则，如果方法由带 this 参数的签名进行上下文键入，那么 this 具有该参数的类型。（下例子中 foo）
+// 否则，如果方法由带 this 参数的签名进行上下文键入，那么 this 具有该参数的类型。
 let foos = {
   x: "hello",
   f(n: number) {

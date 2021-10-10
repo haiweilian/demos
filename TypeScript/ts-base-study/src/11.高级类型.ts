@@ -103,6 +103,24 @@ function getName(n: NameOrResolver): Name {
 getName("1");
 getName(() => "1");
 
+// ====== 可辨识联合
+// - 根据联合类型的公共标识属性，用于判断使用哪个类型
+interface Square {
+  kind: "square";
+  size: number;
+}
+interface Circle {
+  kind: "circle";
+  radius: number;
+}
+type Shape = Square | Circle;
+let obj = {} as Shape;
+if (obj.kind === "square") {
+  obj.size * obj.size;
+} else if (obj.kind === "circle") {
+  obj.radius * obj.radius;
+}
+
 // ====== 索引类型
 interface Cars {
   manufacturer: string;
@@ -119,7 +137,6 @@ let taxi: Cars = {
 // --索引类型查询操作符
 // --首先是`keyof T`，**索引类型查询操作符**。 对于任何类型`T`，`keyof T`的结果为`T`上已知的公共属性名的联合。
 // --**索引访问操作符 T[K] **
-// function pluck<Cars, "manufacturer" | "model">(o: Cars, propertyNames: ("manufacturer" | "model")[]): string[]
 type Test01 = keyof Cars; //  type Test01 = "manufacturer" | "model" | "year"
 function pluck<T, K extends keyof T>(o: T, propertyNames: K[]): T[K][] {
   return propertyNames.map((n) => o[n]);
@@ -133,7 +150,7 @@ interface PersonDefault {
   age: number;
 }
 
-// --将每个属性变为可读
+// --将每个属性变为可选
 // --> keyof T 所有属性的联合类型
 // --> P in 相当于 for ... in 遍历 [keyof T]，每一项都加上 可选标识 ?
 // --> T[P]  索引访问操作符, 属性 P 所指定的类型
@@ -189,3 +206,9 @@ type T8 = MyExclude<"a" | "b" | "c", "b">; // a | b
 type MyExtract<T, U> = T extends U ? T : never;
 
 type T9 = MyExtract<"a" | "b" | "c", "b">; // b
+
+// == 有条件类型中的类型推断
+type MyReturnType<T> = T extends (...args: any) => infer R ? R : any;
+type typeFn = (x: number, y: number) => number;
+
+type re = MyReturnType<typeFn>;
