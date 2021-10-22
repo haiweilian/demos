@@ -1,0 +1,136 @@
+{
+    "configurations": [
+        {
+            "name": "插入函数调用参数-version1",
+            "program": "${workspaceFolder}/exercize-parameters-insert/src/version1.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "插入函数调用参数-version2",
+            "program": "${workspaceFolder}/exercize-parameters-insert/src/version2.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "插入函数调用参数-version3",
+            "program": "${workspaceFolder}/exercize-parameters-insert/src/version3.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "插入函数调用参数-version4",
+            "program": "${workspaceFolder}/exercize-parameters-insert/src/version4.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "自动埋点",
+            "program": "${workspaceFolder}/exercize-auto-track/src/index.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "acorn 插件",
+            "program": "${workspaceFolder}/exercize-acorn-plugin-guang-keyword/src/index.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "自动国际化",
+            "program": "${workspaceFolder}/exercize-auto-i18n/src/index.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "自动生成 api 文档",
+            "program": "${workspaceFolder}/exercize-auto-document/src/index.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "linter-eq-lint",
+            "program": "${workspaceFolder}/exercize-linter/src/eq-lint-entry.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "linter-for-direction-lint",
+            "program": "${workspaceFolder}/exercize-linter/src/for-direction-lint-entry.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "linter-no-func-assign-lint",
+            "program": "${workspaceFolder}/exercize-linter/src/no-func-assign-lint-entry.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "type checker-entry2",
+            "program": "${workspaceFolder}/exercize-type-checker/src/type-checker-entry2.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "type checker-entry3",
+            "program": "${workspaceFolder}/exercize-type-checker/src/type-checker-entry3.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "type checker-entry4",
+            "program": "${workspaceFolder}/exercize-type-checker/src/type-checker-entry4.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "type checker-entry5",
+            "program": "${workspaceFolder}/exercize-type-checker/src/type-checker-entry5.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "type checker-entry6",
+            "program": "${workspaceFolder}/exercize-type-checker/src/type-checker-entry6.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "压缩混淆",
+            "program": "${workspaceFolder}/exercize-mangle-compress/src/index.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "js 解释器-1",
+            "program": "${workspaceFolder}/exercize-js-interpreter/src/interpreter1.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "js 解释器-2",
+            "program": "${workspaceFolder}/exercize-js-interpreter/src/interpreter2.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "模块遍历器",
+            "program": "${workspaceFolder}/exercize-module-iterator/src/index.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "手写简易的 babel-test1",
+            "program": "${workspaceFolder}/exercize-babel/test/test1.js",
+            "request": "launch",
+            "type": "node"
+        },
+        {
+            "name": "手写简易的 babel-test2",
+            "program": "${workspaceFolder}/exercize-babel/test/test2.js",
+            "request": "launch",
+            "type": "node"
+        }
+    ]
+}
