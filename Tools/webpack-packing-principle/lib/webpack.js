@@ -15,13 +15,16 @@ module.exports = class Webpack {
    * 启动编译
    */
   run() {
+    // 入口解析
     const info = this.parse(this.entry);
+    // 收集模块
     this.modules.push(info);
 
-    // 递归处理所有依赖
+    // 递归处理所有依赖 bfs
     for (let i = 0; i < this.modules.length; i++) {
       const item = this.modules[i];
       const { yilai } = item;
+      // 遍历当前模块下的依赖，继续解析模块
       if (yilai) {
         for (let j in yilai) {
           this.modules.push(this.parse(yilai[j]));

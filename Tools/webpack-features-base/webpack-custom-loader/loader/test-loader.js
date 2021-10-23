@@ -4,12 +4,13 @@
 // - 如何返回多个值。
 // - 如果有异步的事情要怎么处理。
 // - 多个 loader 的使用。
-
+const loaderUtils = require('loader-utils')
 module.exports = function (source) {
   const callback = this.async();
   console.log("...同步执行完成");
+  const query =  loaderUtils.getOptions(this)
   setTimeout(() => {
-    console.log("...异步执行完成", this.query.name);
+    console.log("...异步执行完成", query.name);
     callback(null, source);
   }, 2000);
 };

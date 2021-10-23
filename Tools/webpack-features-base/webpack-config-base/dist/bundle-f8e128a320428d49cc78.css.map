@@ -1,0 +1,1 @@
+{"version":3,"file":"bundle-f8e128a320428d49cc78.css","mappings":"AAAA;EACE;AACF;AAFA;EAIG;AACH;AAGA;EACE;AADF","sources":["webpack://webpack-features-base/./src/style.less"],"sourcesContent":["h1 {\n  color: blue;\n\n  span {\n   font-size: 10px;\n  }\n}\n\nimg {\n  width: 200px;\n}\n"],"names":[],"sourceRoot":""}

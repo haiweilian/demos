@@ -1,0 +1,1 @@
+{"version":3,"file":"src_async_js.bundle.js","mappings":";;;;;;;;;;;;;AAAA,SAASA,GAAT,CAAaC,GAAb,EAAkB;AAChBC,EAAAA,OAAO,CAACF,GAAR,CAAYC,GAAZ;AACD","sources":["webpack://webpack-features-base/./src/async.js"],"sourcesContent":["function log(msg) {\n  console.log(msg);\n}\nexport { log };\n"],"names":["log","msg","console"],"sourceRoot":""}
