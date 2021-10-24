@@ -24,6 +24,7 @@
 - [Webpack 配置、优化、插件扩展](./Tools/webpack-features-base)
 - [Webpack 模块解析和打包原理，实现简易 Webpack](./Tools/webpack-packing-principle)
 - [Vite 特性、配置、插件扩展](./Tools/vite-features-base)
+- [Vite 的前身，一百多行代码理解其原理](./Tools/vite-predecessor-vue-dev-server)
 - [TypeScript 学习基础语法和理解类型系统](./TypeScript/ts-base-study)
 - [TypeScript 利用声明文件编写类库声明文件](./TypeScript/ts-declare-study)
 - [TypeScript 深入理解、巧用高级用法](./TypeScript/ts-deep-dive)

@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
 import path from 'path'
+import vue from '@vitejs/plugin-vue'
+import Inspect from 'vite-plugin-inspect'
 // import legacy from '@vitejs/plugin-legacy'
 import virtualFile from './plugins/my-virtual-file'
 import transformFile from './plugins/my-transform-file'
@@ -17,8 +18,11 @@ export default defineConfig({
     // legacy({
     //   targets: ['defaults', 'not IE 11']
     // }),
-    virtualFile(),
-    transformFile()
+    virtualFile({
+      log: '...'
+    }),
+    transformFile(),
+    Inspect() // only applies in dev mode
   ],
   // base: '/com/',
   build: {

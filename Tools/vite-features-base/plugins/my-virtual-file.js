@@ -1,4 +1,5 @@
-export default function () {
+export default function (options) {
+  console.log(options)
   var virtualFileId = '@my-virtual-file'
   return {
     name: 'my-virtual-file',
