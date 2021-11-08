@@ -4,6 +4,7 @@
 
 - [读书.《JavaScript 高级程序设计（第 4 版）》系统化的进阶基础](./JavaScript/red-book)
 - [读书.《JavaScript 设计模式与开发实践》感受设计模式之美](./JavaScript/design-pattern)
+- [源码.各种类型的小型库源码随心分析](https://github.com/haiweilian/tinylib-analysis)
 - [高质量文章阅读记录与实际演示](./JavaScript/excellent-articles)
 - [前端开发中那些跨域时通信方式](./JavaScript/iframe-cross-communication)
 - [那些各种手写代码的原生实现](./JavaScript/native-wheel)
