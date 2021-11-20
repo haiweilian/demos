@@ -1,0 +1,18 @@
+{
+  "name": "learn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "1.how-to-exit-from-a-nodejs-program.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cowsay": "^1.5.0",
+    "inquirer": "^8.2.0",
+    "minimist": "^1.2.5",
+    "progress": "^2.0.3"
+  }
+}

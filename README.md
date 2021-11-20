@@ -34,8 +34,9 @@
 
 - [Koa 原理分析，中间件机制“洋葱模型”](./NodeJs/koa-simple-imp)
 - [解开 CORS 跨域限制的”四层封印“](./NodeJs/cors-solution-test)
-- [NodeJs 错误处理多进程创建与守护](./NodeJs/cluster-worker-process)
-- [Egg 更加实践模板，集成文档生成、权限认证、数据存储](./NodeJs/egg-practice-template)
+- [NodeJs 基础应用和模块应用](./NodeJs/node-base)
+- [NodeJs 深入理解和高级应用](./NodeJs/node-advanced)
+- [Egg 更加实践模板，集成文档生成、权限认证、数据存储](http://github.com/haiweilian/DevsseEggTemplate)
 
 ## 插件扩展
 
