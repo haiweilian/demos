@@ -4,10 +4,9 @@
 
 - [读书.《JavaScript 高级程序设计（第 4 版）》系统化的进阶基础](./JavaScript/red-book)
 - [读书.《JavaScript 设计模式与开发实践》感受设计模式之美](./JavaScript/design-pattern)
-- [源码.各种类型的小型库源码随心分析](https://github.com/haiweilian/tinylib-analysis)
+- [那些各种手写代码的原生实现](./JavaScript/native-wheel)
 - [高质量文章阅读记录与实际演示](./JavaScript/excellent-articles)
 - [前端开发中那些跨域时通信方式](./JavaScript/iframe-cross-communication)
-- [那些各种手写代码的原生实现](./JavaScript/native-wheel)
 
 ## 框架开发
 
@@ -37,7 +36,6 @@
 - [NodeJs 深入理解和高级应用](./NodeJs/node-advanced)
 - [Koa 原理分析，中间件机制“洋葱模型”](./NodeJs/koa-simple-imp)
 - [解开 CORS 跨域限制的”四层封印“](./NodeJs/cors-solution-test)
-- [Egg 更加实践模板，集成文档生成、权限认证、数据存储](http://github.com/haiweilian/DevsseEggTemplate)
 
 ## 插件扩展
 
@@ -46,4 +44,4 @@
 - [Undo Manager 异步的撤销恢复数据管理](./PlugIn/undo-redo-async-manager)
 - [Taggd Manager 创建标记和指引连接线](./PlugIn/taggd-leader-line-marker)
 - [Chrome 插件(扩展)开发全攻略](./PlugIn/chrome-plugin-demo)
-- [前端电商 sku 实现多维属性组合查询](./PlugIn/sku-compose-manager)
+- [Sku 实现多维属性组合查询](./PlugIn/sku-compose-manager)
