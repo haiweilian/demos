@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hand Coded SVG</title>
+  <style>
+  html, body {
+    height: 100%;
+    width: 100%;
+    background: #e9e9e9;
+  }
+  body {
+    margin: 0;
+    text-align: center;
+  }
+  .grid {
+    width: 750px;
+    height: 500px;
+    margin: 0 auto;
+    padding-top: 100px;
+    padding-left: 100px;
+    background-image: url('grid.png');
+    position: relative;
+  }
+  .grid::before {
+    content: "";
+    border-left: 1px solid #7c7cea;
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: 750px;
+    height: 600px;
+  }
+  .grid::after {
+    content: "";
+    border-top: 1px solid #7c7cea;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 850px;
+    height: 500px;
+  }
+  svg {
+    stroke: #000;
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+  }
+  </style>
+</head>
+<body>
+
+<div class="grid">
+  <svg width="0px" height="0px">
+    <!-- 基础的 -->
+    <symbol viewBox="0 0 86 86" id="icon1">
+      <line x1="3" y1="3" x2="48" y2="3"></line>
+      <line x1="3" y1="19" x2="65" y2="19"></line>
+      <line x1="3" y1="35" x2="48" y2="35"></line>
+      <line x1="3" y1="51" x2="65" y2="51"></line>
+    </symbol>
+
+    <!-- 插入图标 -->
+    <symbol viewBox="0 0 86 86" id="icon2">
+      <polyline points="3 3, 30 28, 3 53"></polyline>
+    </symbol>
+
+    <!-- 浏览器图标 -->
+    <symbol viewBox="0 0 86 86" id="icon3">
+      <rect x="3" y="3" width="80" height="60"></rect>
+      <line x1="3" y1="19" x2="83" y2="19"></line>
+      <line x1="20" y1="3" x2="20" y2="17"></line>
+    </symbol>
+
+    <!-- 警告图标 -->
+    <symbol viewBox="0 0 86 86" id="icon4">
+      <ellipse cx="43" cy="43" rx="40" ry="40"></ellipse>
+      <ellipse style="fill:black;" cx="43" cy="65" rx="5" ry="5"></ellipse>
+      <line style="stroke-width: 8px;" x1="43" y1="20" x2="43" y2="50"></line>
+    </symbol>
+
+    <!-- 播放图标 -->
+    <symbol viewBox="0 0 86 86" id="icon5">
+      <ellipse cx="43" cy="43" rx="40" ry="40"></ellipse>
+      <polygon points="40 23, 60 43, 40 63"></polygon>
+    </symbol>
+
+    <!-- 下载图标 -->
+    <symbol viewBox="0 0 86 86" id="icon6">
+      <path d=" M 18 3 L 46 3 L 46 40 L 61 40 L 32 68 L 3 40 L 18 40 Z"></path>
+    </symbol>
+  </svg>
+
+  <svg width="100" height="100">
+    <use href="#icon1"></use>
+  </svg>
+  <svg width="100" height="100">
+    <use href="#icon2"></use>
+  </svg>
+  <svg width="100" height="100">
+    <use href="#icon3"></use>
+  </svg>
+  <svg width="100" height="100">
+    <use href="#icon4"></use>
+  </svg>
+  <svg width="100" height="100">
+    <use href="#icon5"></use>
+  </svg>
+  <svg width="100" height="100">
+    <use href="#icon6"></use>
+  </svg>
+</div>
+</body>
+</html>
