@@ -20,6 +20,12 @@
 
 [一道力扣面试题(学习完上面的知识，这道题想想可以做出来)](https://github.com/LeetCode-OpenSource/hire/blob/master/typescript_zh.md)
 
+系统学习类型体操各种类型操作。
+
+[TypeScript 类型体操通关秘籍](https://juejin.cn/book/7047524421182947366)
+
+[类型体操练习刷题](https://github.com/type-challenges/type-challenges)
+
 这里有比较好的工具库，可以研究看下都怎么实现的。
 
 [内置的类型工具掌握并知道怎么实现的](https://www.typescriptlang.org/docs/handbook/utility-types.html)

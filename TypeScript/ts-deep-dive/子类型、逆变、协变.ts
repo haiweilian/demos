@@ -28,7 +28,7 @@ interface Action {
 declare function dispatch<T extends Action>(action: T);
 
 /**
- * @协变
+ * @协变 如果允许子类型赋值给父类型，就叫做协变。
  */
 // 类型经过转换后，父子之间的类型关系不会变换
 let animals: Animal[];
@@ -37,7 +37,7 @@ animals = dogs;
 animals[0].age;
 
 /**
- * @逆变
+ * @逆变 如果允许父类型赋值给子类型，就叫做逆变。
  */
 let visitAnimal = (animal: Animal) => {
   animal.age;
