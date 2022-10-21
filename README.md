@@ -28,7 +28,7 @@
 - [Jest、VTU 前端自动化测试框架](./Tools/auto-test)
 - [TypeScript 学习基础语法和理解类型系统](./TypeScript/ts-base-study)
 - [TypeScript 利用声明文件编写类库声明文件](./TypeScript/ts-declare-study)
-- [TypeScript 深入理解、巧用高级用法](./TypeScript/ts-deep-dive)
+- [TypeScript 深入理解、类型体操高级用法](./TypeScript/ts-deep-dive)
 
 ## 全栈开发
 
