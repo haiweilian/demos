@@ -12,6 +12,9 @@ https://juejin.cn/post/6844903951389851655
 从电商 sku 的全排列到笛卡尔积
 https://juejin.cn/post/6844904192356646926
 
+电商最小存货单位 SKU——详细代码实现
+https://juejin.cn/post/7078500226905931806
+
 ## Project setup
 
 ```
