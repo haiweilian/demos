@@ -20,7 +20,7 @@ type IsAnyRes2 = IsAny<1>;
 
 /**
  * @IsEqual
- */
+ */\fg
 type IsEqual<A, B> = (<T>() => T extends A ? 1 : 2) extends <T>() => T extends B ? 1 : 2
   ? true
   : false;
