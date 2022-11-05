@@ -40,9 +40,11 @@ let lian: Lian = {
 };
 
 // 可以，因为满足 person 的所有属性，所以类型是安全的
+person.name;
 person = lian;
 
 // 不可以，因为会缺少 location 属性，所以类型是不安全的
+lian.location;
 lian = person;
 
 /**
