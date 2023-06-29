@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+       * 强缓存
+       */
+      fetch("/cache-control");
+
+      /**
+       * 协商缓存，编辑时间变化
+       */
+      fetch("/last-modified").then((res) => {
+        res.json().then((data) => {
+          console.log(data);
+        });
+      });
+    </script>
+  </body>
+</html>
