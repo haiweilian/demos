@@ -3,6 +3,9 @@
 启蒙文档
 https://mp.weixin.qq.com/s?__biz=MzUxMzcxMzE5Ng==&mid=2247485678&idx=1&sn=cec02a67b5003d70dba79146f0d4da69&source=41#wechat_redirect
 
+从零实现生成到应用
+https://juejin.cn/post/7078500226905931806
+
 简单版，符合我现在的要求
 https://juejin.cn/post/6915321356540198926
 
@@ -11,9 +14,6 @@ https://juejin.cn/post/6844903951389851655
 
 从电商 sku 的全排列到笛卡尔积
 https://juejin.cn/post/6844904192356646926
-
-电商最小存货单位 SKU——详细代码实现
-https://juejin.cn/post/7078500226905931806
 
 ## Project setup
 
