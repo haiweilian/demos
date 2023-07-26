@@ -1,5 +1,0 @@
-<view class="container">
-  <button type="primary" bindtap="btnScanCode">识别图书条形码</button>
-  <image src="{{coverurl}}" mode="widthFix"></image>
-  <view>{{title}}</view>
-</view>
