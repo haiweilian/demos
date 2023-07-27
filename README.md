@@ -35,16 +35,16 @@
 
 ## 全栈开发
 
-### NodeJs
+### Node
 
-- [NodeJs 基础应用和模块应用](./NodeJs/node-base)
-- [Koa 原理分析，中间件机制“洋葱模型”](./NodeJs/koa-simple-imp)
-- [解开 CORS 跨域限制的”四层封印“](./NodeJs/cors-solution-test)
+- [NodeJs 基础应用和模块应用](./Node/node-base)
+- [Koa 原理分析，中间件机制“洋葱模型”](./Node/koa-simple-imp)
+- [解开 CORS 跨域限制的”四层封印“](./Node/cors-solution-test)
 
-### NestJs
+### Nest
 
-- [NestJs 基础知识和核心概念](./NestJs/nest-base)
-- [NestJs 后端中间件和生态体系实战应用](./NestJs/nest-practice)
+- [NestJs 基础知识和核心概念](./Nest/nest-base)
+- [NestJs 后端中间件和生态体系实战应用](./Nest/nest-practice)
 
 ### Server
 
