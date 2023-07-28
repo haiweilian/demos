@@ -21,6 +21,8 @@ import { GuardsModule } from './guards/guards.module';
 import { RolesGuard } from './guards/roles.guard';
 import { InterceptorModule } from './interceptor/interceptor.module';
 import { InterceptorInterceptor } from './interceptor/interceptor.interceptor';
+import { CustomProvidersModule } from './custom-providers/custom-providers.module';
+import { DynamicModulesModule } from './dynamic-modules/dynamic-modules.module';
 
 @Module({
   imports: [
@@ -30,6 +32,8 @@ import { InterceptorInterceptor } from './interceptor/interceptor.interceptor';
     PipeModule,
     GuardsModule,
     InterceptorModule,
+    CustomProvidersModule,
+    DynamicModulesModule.forRoot({ dir: __dirname }),
   ],
   controllers: [AppController],
   providers: [

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+</head>
+<body>
+    <input id="fileInput" type="file" multiple />
+    <script>
+        const fileInput = document.querySelector('#fileInput');
+        async function formData() {
+            const data = new FormData();
+            data.set('name','连');
+            data.set('age', 20);
+            [...fileInput.files].forEach(item => {
+                data.append('file', item)
+            })
+            const res = await axios.post('http://localhost:3000/uploads', data);
+            console.log(res);
+        }
+        fileInput.onchange = formData;
+    </script>
+</body>
+</html>
