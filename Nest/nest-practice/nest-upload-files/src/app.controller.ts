@@ -3,9 +3,12 @@ import {
   Controller,
   FileTypeValidator,
   Get,
-  MaxFileSizeValidator,
+  // MaxFileSizeValidator,
   ParseFilePipe,
   Post,
+  Query,
+  Res,
+  StreamableFile,
   UploadedFile,
   UploadedFiles,
   UseInterceptors,
@@ -14,6 +17,9 @@ import { AppService } from './app.service';
 import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { storage } from './storage';
 import { MyMaxFileSizeValidator } from './MyMaxFileSizeValidator';
+import { createReadStream } from 'fs';
+import { join } from 'path';
+import { Response } from 'express';
 
 @Controller()
 export class AppController {
@@ -60,5 +66,19 @@ export class AppController {
   )
   uploads(@UploadedFiles() file: Array<Express.Multer.File>, @Body() body) {
     console.log(file, body);
+  }
+
+  // 下载文件
+  @Get('/download')
+  download(
+    @Query('url') url: string,
+    @Res({ passthrough: true }) res: Response,
+  ) {
+    const file = createReadStream(join(__dirname, '../uploads', url));
+    // 指定名称可以在利用浏览器下载功能时为指定的文件名
+    res.set({
+      'Content-Disposition': `attachment; filename="${url}"`,
+    });
+    return new StreamableFile(file);
   }
 }

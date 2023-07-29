@@ -1,25 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script src="https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <input id="fileInput" type="file" />
+    <button id="download">下载文件</button>
     <script>
-        const fileInput = document.querySelector('#fileInput');
-        async function formData() {
-            const data = new FormData();
-            data.set('name','连');
-            data.set('age', 20);
-            data.set('file', fileInput.files[0]);
-            const res = await axios.post('http://localhost:3000/upload', data);
-            console.log(res);
-        }
-        fileInput.onchange = formData;
+      const fileInput = document.querySelector('#fileInput');
+      let url = '';
+      async function formData() {
+        const data = new FormData();
+        data.set('name', '连');
+        data.set('age', 20);
+        data.set('file', fileInput.files[0]);
+        const res = await axios.post('http://localhost:3000/upload', data);
+        url = res.data.path;
+        console.log(res, url);
+      }
+      fileInput.onchange = formData;
     </script>
-</body>
+    <script>
+      const download = document.querySelector('#download');
+      async function downFile() {
+        const res = await axios.get('http://localhost:3000/download', {
+          params: {
+            url: url,
+          },
+        });
+
+        // a 标签下载
+        const link = document.createElement('a');
+        link.href = `http://localhost:3000/download?url=${url}`;
+        link.target = '_blank';
+        link.click();
+      }
+      download.onclick = downFile;
+    </script>
+  </body>
 </html>
