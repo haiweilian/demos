@@ -1,0 +1,17 @@
+### 成功请求
+POST http://localhost:3000/custom HTTP/1.1
+Content-Type: application/json
+
+{
+  "age": 20,
+  "name": "lian"
+}
+
+### 错误请求
+POST http://localhost:3000/custom HTTP/1.1
+Content-Type: application/json
+
+{
+  "age": null,
+  "name": null
+}
