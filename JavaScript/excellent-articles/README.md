@@ -1,3 +1,0 @@
-- [剖析 Promise 内部结构，一步一步实现一个完整的、能通过所有 Test case 的 Promise 类](./promise-plus)
-- [Callback Promise Generator Async-Await 和异常处理的演进](./async-error)
-- [前端面试常见的浏览器缓存（强缓存、协商缓存），代码实操](./browser-cache)
