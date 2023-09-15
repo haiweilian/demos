@@ -18,7 +18,7 @@
 - [TypeScript 类型体操集合刷题挑战记录](./TypeScript/ts-challenges)
 - [TypeScript 类型运算实现一个五子棋游戏](./TypeScript/ts-gobang)
 
-## 框架开发
+## 框架
 
 ### Vue
 
@@ -33,7 +33,7 @@
 - [React 边学边做实现井字棋以及扩展的功能](./React/react-tic-tac-toe)
 - [React 全新生态体系的核心特性探索](./React/react-family-core-features)
 
-## 全栈开发
+## 全栈
 
 ### Node
 
