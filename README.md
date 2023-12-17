@@ -43,6 +43,7 @@
 ### Nest
 
 - [NestJs 基础知识和核心概念](./Nest/nest-base)
+- [NestJs 请求生命周期与演示](./Nest/nest-request-lifecycle)
 - [NestJs 上传文件和文件流压缩包下载](./Nest/nest-upload-files)
 - [NestJs 中使用 Mybatis Mapper 简化编写 SQL 语句](./Nest/nest-mybatis-mapper)
 
