@@ -1,31 +1,52 @@
 import {
-  Body,
   Controller,
   Get,
-  Param,
-  ParseIntPipe,
   Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+  ParseIntPipe,
+  ParseArrayPipe,
   UsePipes,
 } from '@nestjs/common';
-import { CreateCatSchema, CreateDto } from './dto/create.dto';
-import { JoiValidationPipe, ValidationPipe } from './validate.pipe';
+import { PipeService } from './pipe.service';
+import { CreatePipeDto } from './dto/create-pipe.dto';
+import { UpdatePipeDto } from './dto/update-pipe.dto';
+// import { ValidatePipe } from './validate.pipe';
+import { MyParseIntPipe } from './parse-int.pipe';
 
 @Controller('pipe')
+// @UsePipes(ValidatePipe)
 export class PipeController {
+  constructor(private readonly pipeService: PipeService) {}
+
+  @Post()
+  // @UsePipes(ValidatePipe)
+  create(@Body() createPipeDto: CreatePipeDto) {
+    return this.pipeService.create(createPipeDto);
+  }
+
+  @Get()
+  findAll() {
+    return this.pipeService.findAll();
+  }
+
   @Get(':id')
-  async findOne(@Param('id', ParseIntPipe) id: number) {
-    return id;
+  findOne(@Param('id', ParseIntPipe) id: number) {
+    return this.pipeService.findOne(id);
   }
 
-  @Post('/create/joi')
-  // @UsePipes(new JoiValidationPipe(CreateCatSchema))
-  createJoi(@Body() createDto: CreateDto) {
-    return createDto;
+  @Patch(':id')
+  update(
+    @Param('id', MyParseIntPipe) id: number,
+    @Body() updatePipeDto: UpdatePipeDto,
+  ) {
+    return this.pipeService.update(id, updatePipeDto);
   }
 
-  @Post('/create/class')
-  // @UsePipes(ValidationPipe)
-  createClass(@Body() createDto: CreateDto) {
-    return createDto;
+  @Delete(':ids')
+  remove(@Param('ids', new ParseArrayPipe({ items: Number })) ids: number[]) {
+    return this.pipeService.remove(ids);
   }
 }

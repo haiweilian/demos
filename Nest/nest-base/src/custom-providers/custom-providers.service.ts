@@ -1,18 +1,27 @@
-import { Inject, Injectable, OnModuleInit } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
+import { ConfigValue, ConfigFactory, ConfigExisting } from './token';
 
 @Injectable()
-export class CustomProvidersService implements OnModuleInit {
+export class CustomProvidersService {
   constructor(
-    @Inject('useValue') private useValue: any,
-    @Inject('useClass') private useClass: any,
-    @Inject('useFactory') private useFactory: any,
-    @Inject('useExisting') private useExisting: any,
+    // 基于非类的提供者标记
+    @Inject('configValue') readonly configValue: object,
+    @Inject('configFactory') readonly configFactory: object,
+    @Inject('configExisting') readonly configExisting: object,
+    // 基于类的提供者标记
+    readonly configValue2: ConfigValue,
+    readonly configFactory2: ConfigFactory,
+    readonly configExisting2: ConfigExisting,
   ) {}
 
-  onModuleInit() {
-    console.log('【custom-providers】值提供者', this.useValue);
-    console.log('【custom-providers】类提供者', this.useClass);
-    console.log('【custom-providers】工厂提供者', this.useFactory);
-    console.log('【custom-providers】别名提供者', this.useExisting);
+  config() {
+    return {
+      configValue: this.configValue,
+      configFactory: this.configFactory,
+      configExisting: this.configExisting,
+      configValue2: this.configValue2,
+      configFactory2: this.configFactory2,
+      configExisting2: this.configExisting2,
+    };
   }
 }

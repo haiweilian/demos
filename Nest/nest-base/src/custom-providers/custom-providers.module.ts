@@ -1,53 +1,59 @@
-import { Injectable, Module } from '@nestjs/common';
+import { Module } from '@nestjs/common';
+import { CustomProvidersController } from './custom-providers.controller';
 import { CustomProvidersService } from './custom-providers.service';
-
-export class useClass {
-  constructor(public num = 1) {}
-}
-
-@Injectable()
-export class useExistingInjectable {
-  public name = 'lian';
-}
+import { ConfigValue, ConfigFactory, ConfigExisting } from './token';
 
 @Module({
-  // 提供者，声明后续需要注入的依赖
+  controllers: [CustomProvidersController],
   providers: [
-    CustomProvidersService,
-    // 值提供者
+    // 标准提供者，
+    // CustomProvidersService, // 等同类提供者的简写
     {
-      provide: 'useValue', // provide 提供一个令牌，可以是字符串或类，只要注入的时候是同一个字符串或类。
-      useValue: 'useValue',
+      provide: CustomProvidersService,
+      useClass: CustomProvidersService,
     },
-    // 类提供者，使用 useClass 会自动实例化
+
+    // 值提供者，可以注入任意的常量和对象
     {
-      provide: 'useClass',
-      useClass: useClass,
+      provide: 'configValue',
+      useValue: { name: 'lian' },
     },
-    // 工厂提供者，是提供异步值的唯一方式
     {
-      provide: 'useFactory',
-      async useFactory(a: useClass) {
-        const value = await new Promise((resolve) => {
-          setTimeout(() => {
-            resolve('useFactory');
-          }, 1000);
+      provide: ConfigValue,
+      useValue: new ConfigValue(),
+    },
+
+    // 工厂提供者，提供一个函数可以是同步或异步
+    {
+      provide: 'configFactory',
+      async useFactory(config) {
+        return Promise.resolve({
+          name: config.name,
+          address: 'China',
         });
-        return {
-          num: a.num,
-          useFactory: value,
-        };
       },
-      inject: ['useClass'], // 注入其他提供者
+      inject: ['configValue'], // 依赖项
     },
-    // 别名提供者，为现有的提供者起一个别名
-    useExistingInjectable,
     {
-      provide: 'useExisting',
-      useExisting: useExistingInjectable,
+      provide: ConfigFactory,
+      async useFactory(config) {
+        return Promise.resolve({
+          name: config.name,
+          address: 'China',
+        });
+      },
+      inject: [ConfigValue], // 依赖项
+    },
+
+    // 别名提供者，可以对另一个提供者起一个别名
+    {
+      provide: 'configExisting',
+      useExisting: 'configFactory',
+    },
+    {
+      provide: ConfigExisting,
+      useExisting: ConfigFactory,
     },
   ],
-  // 非全局模块必须导出其他模块才能使用
-  exports: ['useValue'],
 })
 export class CustomProvidersModule {}

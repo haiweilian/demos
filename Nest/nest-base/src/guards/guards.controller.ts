@@ -1,14 +1,14 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { Roles } from './roles.decorator';
+import { RolesGuard } from './roles.guard';
 
 @Controller('guards')
 // @UseGuards(RolesGuard)
 export class GuardsController {
-  @Get('/user')
+  @Get()
   @Roles('admin')
-  index() {
-    return {
-      name: 'lian',
-    };
+  // @UseGuards(RolesGuard)
+  get() {
+    return 'ok';
   }
 }
