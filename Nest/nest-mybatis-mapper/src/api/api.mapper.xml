@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="api">
+  <select id="listxml">
+    SELECT
+      sc.id id,
+      sc.score score,
+      st.name studentName,
+      su.name subjectName
+    FROM
+      score sc
+      LEFT JOIN student st ON sc.studentId = st.id
+      LEFT JOIN SUBJECT su ON sc.subjectId = su.id
+    <where>
+      <if test="studentId != null and studentId !=''">
+        AND sc.studentId = #{studentId}
+      </if>
+      <if test="subjectId != null and subjectId !=''">
+        AND sc.subjectId IN
+        <foreach collection="subjectId" item="id" open="(" separator="," close=")">
+          #{id}
+        </foreach>
+      </if>
+    </where>
+    ORDER BY sc.score ${scoreSort}
+  </select>
+</mapper>

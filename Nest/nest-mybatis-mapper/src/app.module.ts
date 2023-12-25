@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { FruitsModule } from './fruits/fruits.module';
+import { ApiModule } from './api/api.module';
 
 @Module({
   imports: [
@@ -18,9 +18,10 @@ import { FruitsModule } from './fruits/fruits.module';
       synchronize: true,
       logging: true,
     }),
-    FruitsModule,
+    ApiModule,
   ],
   controllers: [AppController],
   providers: [AppService],
+  exports: [],
 })
 export class AppModule {}
