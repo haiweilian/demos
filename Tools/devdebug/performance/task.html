@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script>
+      function calc() {
+        let a = 0;
+        for (let i = 0; i < 1000000; i++) {
+          a += i;
+        }
+      }
+
+      function printpromise1() {
+        console.log('promise1');
+        calc();
+      }
+      function printpromise2() {
+        console.log('promise2');
+        calc();
+      }
+      function printtimer1() {
+        console.log('timer1');
+        calc();
+      }
+      function printtimer2() {
+        console.log('timer2');
+        calc();
+      }
+      function printstart() {
+        console.log('start');
+        calc();
+      }
+      function printmutation() {
+        console.log('mutation');
+        calc();
+      }
+      Promise.resolve().then(function printpromise1Callback() {
+        printpromise1();
+        const timer2 = setTimeout(function printtimer2Callback() {
+          printtimer2();
+        }, 0);
+      });
+      const timer1 = setTimeout(function printtimer1Callback(){
+        printtimer1();
+
+        Promise.resolve().then(function printpromise2Callback() {
+          printpromise2();
+        });
+      }, 0);
+      new MutationObserver(function printmutationCallback() {
+        printmutation();
+      }).observe(document.body, {
+        type: 'attribute',
+        attributeFilter: ['aaa'],
+      });
+      document.body.setAttribute('aaa', 'guang');
+
+      printstart();
+    </script>
+  </body>
+</html>

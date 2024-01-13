@@ -1,0 +1,16 @@
+{
+  "name": "cdp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chrome-devtools-frontend": "^1.0.672485",
+    "ws": "^8.16.0"
+  }
+}

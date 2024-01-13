@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+  function fun() {
+    const a = 1;
+    const b = 2;
+    return function () {
+        const c = 2;
+
+        console.log(a, c);
+        debugger;
+    };
+  }
+
+  const f = fun();
+  f();
+
+  function fun2() {
+    const a = 1;
+    const b = 2;
+    return function () {
+        const c = 2;
+
+        eval("console.log(a, b, c);");
+        debugger;
+    };
+  }
+
+  const f2 = fun2();
+  f2();
+</script>
+</body>
+</html>
