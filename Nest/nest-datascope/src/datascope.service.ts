@@ -1,25 +1,25 @@
-import {
-  CallHandler,
-  ExecutionContext,
-  Injectable,
-  NestInterceptor,
-} from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { Reflector } from '@nestjs/core';
+import { ClsService, CLS_REQ } from 'nestjs-cls';
 import { TableAlias } from './datascope.decorator';
 
 @Injectable()
-export class DataScopeInterceptor implements NestInterceptor {
-  constructor(private readonly reflector: Reflector) {}
-  intercept(context: ExecutionContext, next: CallHandler) {
+export class DataScopeService {
+  constructor(
+    private readonly cls: ClsService,
+    private readonly reflector: Reflector,
+  ) {}
+
+  sql(handler: Function) {
     // 获取别名配置
     const alias: TableAlias = this.reflector.get(
       'DATA_SCOPE_METADATA',
-      context.getHandler(),
+      handler,
     );
-    if (!alias) return next.handle();
+    if (!alias) return '';
 
     // 获取用户信息
-    const request = context.switchToHttp().getRequest();
+    const request = this.cls.get(CLS_REQ);
     const { deptAlias, userAlias } = alias;
     const { userId, roleId, deptId, dataScope } = request.user;
     const isAdmin = userId === 1;
@@ -43,9 +43,6 @@ export class DataScopeInterceptor implements NestInterceptor {
       sqlString = `${userAlias}.user_id = ${userId}`;
     }
 
-    // 保存在请求中
-    request['DATA_SCOPE_SQL'] = sqlString;
-
-    return next.handle();
+    return sqlString;
   }
 }

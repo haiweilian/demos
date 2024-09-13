@@ -1,13 +1,10 @@
 import { SetMetadata } from '@nestjs/common';
 
-export class TableAlias {
-  deptAlias?: string = 'dept';
-  userAlias?: string = 'user';
+export interface TableAlias {
+  deptAlias: string;
+  userAlias: string;
 }
 
-export const DataScope = (tableAlias?: TableAlias) => {
-  return SetMetadata(
-    'DATASCOPE_METADATA',
-    Object.assign(new TableAlias(), tableAlias),
-  );
+export const DataScope = (tableAlias: TableAlias) => {
+  return SetMetadata('DATA_SCOPE_METADATA', tableAlias);
 };

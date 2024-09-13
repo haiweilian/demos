@@ -58,7 +58,7 @@ CREATE TABLE `role` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `role` (`role_id`, `role_code`, `data_scope`) VALUES (1, 'admin', '1');
-INSERT INTO `role` (`role_id`, `role_code`, `data_scope`) VALUES (2, 'manager', '2');
+INSERT INTO `role` (`role_id`, `role_code`, `data_scope`) VALUES (2, 'manager', '4');
 INSERT INTO `role` (`role_id`, `role_code`, `data_scope`) VALUES (3, 'common', '5');
 COMMIT;
 
