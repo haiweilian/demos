@@ -1,10 +1,16 @@
 -- 3. 查询在 SC 表存在成绩的学生信息
 
--- 使用 IN 查询存在程序的学生
-SELECT * FROM student WHERE SId IN(SELECT DISTINCT SId FROM sc);
+-- 查询有成绩的学生id在in
+SELECT * FROM student WHERE SId IN(
+	SELECT DISTINCT SId FROM result
+);
 
--- 使用 EXISTS 判断学生是否存在分数
-SELECT * FROM student WHERE EXISTS(SELECT SId FROM sc WHERE sc.SId = student.SId);
+-- 使用 exists 判断改学成有无成绩记录
+SELECT * FROM student WHERE EXISTS (
+	SELECT SId FROM result WHERE student.SId = result.SId
+);
 
--- 使用联结，DBMS对联结有查询优化
-SELECT DISTINCT student.* FROM student, sc WHERE student.SId = sc.SId
+-- 使用 INNER JOIN 学生和成绩都有，再去重
+SELECT DISTINCT student.*  FROM student
+INNER JOIN result
+ON student.SId = result.SId

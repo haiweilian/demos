@@ -1,0 +1,8 @@
+-- 45. 查询下月过生日的学生
+--
+SELECT * FROM student
+WHERE MONTH(Sage) = MONTH(ADDDATE(CURDATE(),INTERVAL 1 MONTH))
+
+-- 支持跨年处理
+SELECT * from student
+WHERE MONTH('2013-01-01') = MONTH(ADDDATE('2024-12-27',INTERVAL 1 MONTH))
