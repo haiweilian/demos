@@ -1,2 +1,3 @@
 - [SQL 基础学习](./sql-base/)
 - [SQL 50 题练习](./sql50/)
+- [全解 MySQL 数据库](./sql-deep-mysql/)
