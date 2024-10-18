@@ -1,0 +1,6 @@
+[package]
+name = "ch06-01-defining-an-enum"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
