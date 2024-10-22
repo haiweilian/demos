@@ -1,0 +1,6 @@
+[package]
+name = "ch13-02-iterators"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]

@@ -1,0 +1,6 @@
+[package]
+name = "ch13-01-closures"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
