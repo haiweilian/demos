@@ -1,0 +1,7 @@
+[package]
+name = "ch17-02-concurrency-with-async"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+trpl = "0.2.0"
