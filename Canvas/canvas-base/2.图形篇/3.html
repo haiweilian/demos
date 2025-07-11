@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 椭圆</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500" style="box-shadow: 0px 0px 5px #ccc; border-radius: 8px">
+      当前浏览器不支持canvas元素，请升级或更换浏览器！
+    </canvas>
+    <script>
+      const canvas = document.getElementById("canvas"); // 获取Canvas
+      const ctx = canvas.getContext("2d"); // 获取绘制上下文
+      ctx.strokeStyle = "#f00"; // 描边样式设置为红色
+      ctx.fillStyle = "#00f"; // 填充样式设置为蓝色
+      ctx.lineWidth = 5;
+
+      // 绘制一个椭圆
+      ctx.beginPath();
+      ctx.ellipse(100, 100, 50, 100, 0, 0, 2 * Math.PI);
+      ctx.stroke();
+
+      // 填充一个椭圆
+      ctx.beginPath();
+      ctx.ellipse(300, 100, 100, 50, 0, 0, 2 * Math.PI);
+      ctx.fill();
+
+      // 旋转一个椭圆 45 度
+      ctx.beginPath();
+      // ctx.fillStyle = "rgba(0, 255, 0, 0.5)"; // 指定透明度的填充样式
+      ctx.globalAlpha = 0.5;
+      ctx.ellipse(150, 300, 100, 50, 45 * (Math.PI / 180), 0, 2 * Math.PI);
+      ctx.fill();
+    </script>
+  </body>
+</html>

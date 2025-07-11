@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 直线</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500" style="box-shadow: 0px 0px 5px #ccc; border-radius: 8px">
+      当前浏览器不支持canvas元素，请升级或更换浏览器！
+    </canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      console.log(ctx); // CanvasRenderingContext2D ...
+
+      ctx.strokeStyle = "#f00";
+      ctx.lineWidth = 5;
+      ctx.lineCap = "round";
+      ctx.moveTo(50, 50); // 初始位置
+      ctx.lineTo(250, 50); // 设置终点位置
+      ctx.stroke(); // 会把两个点用直线连接
+
+      ctx.beginPath();
+
+      ctx.lineWidth = 10;
+      ctx.lineCap = "square";
+      ctx.moveTo(100, 100); // 初始位置
+      ctx.lineTo(100, 200); // 设置终点位置1
+      ctx.lineTo(200, 200); // 设置终点位置2（绘制时会从 1 到 2 绘制一条线）
+      ctx.stroke();
+    </script>
+  </body>
+</html>

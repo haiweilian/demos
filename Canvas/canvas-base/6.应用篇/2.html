@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 拾色器</title>
+    <style>
+      /* 给画布增加一个阴影和圆角的样式 */
+      canvas {
+        box-shadow: 0px 0px 5px #ccc;
+        border-radius: 8px;
+      }
+      div {
+        width: 430px;
+        height: 30px;
+        color: #fff;
+        box-shadow: 0px 0px 5px #ccc;
+        border-radius: 8px;
+        line-height: 30px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="450" height="800"> 当前浏览器不支持canvas元素，请升级或更换浏览器！ </canvas>
+    <div id="hovered"></div>
+    <div id="selected"></div>
+    <script>
+      // 获取 canvas 元素
+      var canvas = document.getElementById("canvas");
+      // 通过判断getContext方法是否存在来判断浏览器的支持性
+      if (canvas.getContext) {
+        // 获取绘图上下文
+        var ctx = canvas.getContext("2d");
+        var img = new Image();
+        img.crossOrigin = "anonymous";
+        img.src = "https://img1.baidu.com/it/u=4141276181,3458238270&fm=253&fmt=auto&app=138&f=JPEG";
+        img.onload = function () {
+          ctx.drawImage(img, 0, 0, 450, 800);
+          img.style.display = "none";
+        };
+        var hoveredColor = document.getElementById("hovered");
+        var selectedColor = document.getElementById("selected");
+
+        canvas.addEventListener("mousemove", function (event) {
+          pickColor("move", event, hoveredColor);
+        });
+        canvas.addEventListener("click", function (event) {
+          pickColor("click", event, selectedColor);
+        });
+
+        function pickColor(type, event, destination) {
+          var x = event.layerX;
+          var y = event.layerY;
+          var pixel = ctx.getImageData(x, y, 1, 1);
+          var data = pixel.data;
+          const rgba = `rgba(${data[0]}, ${data[1]}, ${data[2]}, ${data[3] / 255})`;
+          destination.style.background = rgba;
+          if (type === "move") {
+            destination.textContent = "划过的颜色为：" + rgba;
+          } else {
+            console.log(pixel);
+            destination.textContent = "选中的颜色为：" + rgba;
+          }
+          return rgba;
+        }
+      }
+    </script>
+  </body>
+</html>

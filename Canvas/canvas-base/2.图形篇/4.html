@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 渐变</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="450" height="450" style="box-shadow: 0px 0px 5px #ccc; border-radius: 8px">
+      当前浏览器不支持canvas元素，请升级或更换浏览器！
+    </canvas>
+    <script>
+      const canvas = document.getElementById("canvas"); // 获取Canvas
+      const ctx = canvas.getContext("2d"); // 获取绘制上下文
+      ctx.strokeStyle = "#f00"; // 描边样式设置为红色
+      ctx.fillStyle = "#00f"; // 填充样式设置为蓝色
+      ctx.lineWidth = 5;
+
+      // 创建渐变
+      var gradient1 = ctx.createLinearGradient(10, 10, 400, 10);
+      gradient1.addColorStop(0, "#000000");
+      gradient1.addColorStop(1, "#f00");
+
+      var gradient2 = ctx.createLinearGradient(10, 10, 400, 10);
+      // 从0.5的位置才开始渐变
+      gradient2.addColorStop(0.5, "#000000");
+      gradient2.addColorStop(1, "#f00");
+
+      ctx.beginPath();
+      ctx.fillStyle = gradient1;
+      ctx.fillRect(10, 10, 400, 100);
+
+      ctx.beginPath();
+      ctx.fillStyle = gradient2;
+      ctx.fillRect(10, 150, 400, 100);
+    </script>
+  </body>
+</html>

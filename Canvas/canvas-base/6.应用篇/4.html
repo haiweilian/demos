@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 刮刮奖</title>
+    <style>
+      /* 给画布增加一个阴影和圆角的样式 */
+      canvas {
+        background-color: #ccc;
+        box-shadow: 0px 0px 5px #ccc;
+        border-radius: 8px;
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="1000" height="500"> 当前浏览器不支持canvas元素，请升级或更换浏览器！ </canvas>
+    <script>
+      // 获取 canvas 元素
+      var canvas = document.getElementById("canvas");
+
+      // 通过判断getContext方法是否存在来判断浏览器的支持性
+      if (canvas.getContext) {
+        // 获取绘图上下文
+        var ctx = canvas.getContext("2d");
+        const imageUrl =
+          "https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.mp.itc.cn%2Fupload%2F20160909%2Feca561d1ecce4fcab4f600a74f15b221_th.jpeg&refer=http%3A%2F%2Fimg.mp.itc.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1672410563&t=65c34c7d49a899c2f2a3c0f99827312f";
+
+        // 设置画笔
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+        ctx.lineWidth = 50;
+
+        // 为canvas添加鼠标按下事件
+        canvas.addEventListener("mousedown", mousedownFn, false);
+        let downX, downY;
+        // 鼠标按下触发的方法
+        function mousedownFn(e) {
+          e.preventDefault();
+          downX = e.pageX;
+          downY = e.pageY;
+          drawLine({ startX: downX, startY: downY });
+          // 为canvas添加鼠标移动和鼠标抬起事件
+          canvas.addEventListener("mousemove", mousemoveFn, false);
+          canvas.addEventListener("mouseup", mouseupFn, false);
+        }
+
+        // 鼠标移动触发
+        function mousemoveFn(e) {
+          e.preventDefault();
+          const moveX = e.pageX;
+          const moveY = e.pageY;
+          drawLine({ endX: moveX, endY: moveY });
+          downX = moveX;
+          downY = moveY;
+        }
+
+        // 鼠标抬起触发
+        function mouseupFn() {
+          // 鼠标抬起以后移除事件
+          canvas.removeEventListener("mousemove", mousemoveFn, false);
+          canvas.removeEventListener("mouseup", mouseupFn, false);
+        }
+
+        // 画线
+        function drawLine(position) {
+          const { startX, startY, endX, endY } = position;
+          ctx.beginPath();
+          ctx.moveTo(startX, startY);
+          ctx.lineTo(endX || startX, endY || startY);
+          ctx.stroke();
+        }
+
+        drawImage(imageUrl);
+        function drawImage(src) {
+          const img = new Image();
+          img.crossOrigin = "";
+          img.src = src;
+          img.onload = () => {
+            const imageAspectRatio = img.width / img.height;
+            const canvasAspectRatio = canvas.width / canvas.height;
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            ctx.globalCompositeOperation = "destination-out";
+          };
+        }
+      }
+    </script>
+  </body>
+</html>

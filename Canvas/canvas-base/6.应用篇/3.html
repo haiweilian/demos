@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 签名</title>
+    <style>
+      /* 给画布增加一个阴影和圆角的样式 */
+      canvas {
+        box-shadow: 0px 0px 5px #ccc;
+        border-radius: 8px;
+      }
+      div {
+        width: 450px;
+        box-shadow: 0px 0px 5px #ccc;
+        border-radius: 8px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="450" height="300"> 当前浏览器不支持canvas元素，请升级或更换浏览器！ </canvas>
+    <div id="clear">清空画布</div>
+    <script>
+      // 获取 canvas 元素
+      var canvas = document.getElementById("canvas");
+      var clear = document.getElementById("clear");
+      const ctx = canvas.getContext("2d");
+      canvas.addEventListener("mouseenter", () => {
+        canvas.addEventListener("mousedown", (e) => {
+          ctx.beginPath();
+          ctx.moveTo(e.offsetX, e.offsetY);
+          canvas.addEventListener("mousemove", draw);
+        });
+        canvas.addEventListener("mouseup", () => {
+          canvas.removeEventListener("mousemove", draw);
+        });
+      });
+      function draw(e) {
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
+      }
+      clear.addEventListener("click", () => {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      });
+    </script>
+  </body>
+</html>

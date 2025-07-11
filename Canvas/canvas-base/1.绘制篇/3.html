@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 三角形</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500" style="box-shadow: 0px 0px 5px #ccc; border-radius: 8px">
+      当前浏览器不支持canvas元素，请升级或更换浏览器！
+    </canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      console.log(ctx); // CanvasRenderingContext2D ...
+
+      ctx.strokeStyle = "#f00";
+      ctx.moveTo(50, 50);
+      ctx.lineTo(50, 100);
+      ctx.lineTo(100, 100);
+      ctx.lineTo(50, 50);
+      ctx.stroke();
+
+      ctx.beginPath();
+
+      ctx.moveTo(50, 200);
+      ctx.lineTo(50, 250);
+      ctx.lineTo(100, 250);
+      ctx.fill(); // 填充会自动闭合
+    </script>
+  </body>
+</html>

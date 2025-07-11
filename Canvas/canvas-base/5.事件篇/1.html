@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 键盘事件</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500" tabindex="0" style="box-shadow: 0px 0px 5px #ccc; border-radius: 8px">
+      当前浏览器不支持canvas元素，请升级或更换浏览器！
+    </canvas>
+    <script>
+      // 获取Canvas
+      const canvas = document.getElementById("canvas");
+      // 获取绘制上下文
+      const ctx = canvas.getContext("2d");
+      // 设置填充的颜色为橘色
+      ctx.fillStyle = "orange";
+      // 获取x,y的值
+      let x = canvas.width / 2 - 50;
+      let y = canvas.height / 2 - 50;
+
+      // 绘制一个矩形
+      ctx.fillRect(x, y, 100, 50);
+      // 给canvas添加鼠标移动事件
+      window.addEventListener("keydown", doKeydown, false);
+
+      function doKeydown(e) {
+        ctx.clearRect(0, 0, 500, 500);
+        var keyID = e.keyCode ? e.keyCode : e.which;
+        switch (e.keyCode) {
+          case 37:
+            console.log(`按下左键`);
+            x = x - 10;
+            ctx.fillRect(x, y, 100, 50);
+            break;
+          case 38:
+            console.log(`按下上键`);
+            y = y - 10;
+            ctx.fillRect(x, y, 100, 50);
+            break;
+          case 39:
+            console.log(`按下右键`);
+            x = x + 10;
+            ctx.fillRect(x, y, 100, 50);
+            break;
+          case 40:
+            console.log(`按下下键`);
+            y = y + 10;
+            ctx.fillRect(x, y, 100, 50);
+            break;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 矩形</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500" style="box-shadow: 0px 0px 5px #ccc; border-radius: 8px">
+      当前浏览器不支持canvas元素，请升级或更换浏览器！
+    </canvas>
+    <script>
+      const canvas = document.getElementById("canvas");
+      const ctx = canvas.getContext("2d");
+      console.log(ctx); // CanvasRenderingContext2D ...
+
+      ctx.strokeStyle = "#f00"; // 描边样式设置为红色
+      ctx.rect(50, 50, 200, 100); // 绘制矩形
+      ctx.stroke(); // 描边一个矩形轮廓
+
+      ctx.beginPath(); // 开启新路径，下面的设置就不会影响上面的
+
+      ctx.fillStyle = "#0f0"; // 描边样式设置为绿色
+      ctx.rect(50, 200, 200, 100); // 绘制矩形
+      ctx.fill(); // 填充一个矩形
+    </script>
+  </body>
+</html>

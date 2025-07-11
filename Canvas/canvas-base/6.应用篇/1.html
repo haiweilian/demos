@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 事件</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="1000" height="500" tabindex="0" style="box-shadow: 0px 0px 5px #ccc; border-radius: 8px">
+      当前浏览器不支持canvas元素，请升级或更换浏览器！
+    </canvas>
+    <button id="button">生成图片</button>
+    <img id="img" src="" alt="" />
+    <script>
+      // 获取Canvas
+      const canvas = document.getElementById("canvas");
+      const width = canvas.width;
+      const height = canvas.height;
+      // 获取绘制上下文
+      const ctx = canvas.getContext("2d");
+      const images = [
+        {
+          name: "鬼",
+          url: "./gui.jpg",
+        },
+        {
+          name: "猫",
+          url: "./mao.jpg",
+        },
+      ];
+
+      let imagesData = [];
+      let clickCoordinate = { x: 0, y: 0 };
+      let target;
+      images.forEach((item) => {
+        // 创建image元素
+        const image = new Image();
+        image.src = item.url;
+        const name = item.name;
+        image.onload = () => {
+          // 控制宽度为200（等宽）
+          const w = 200;
+          // 高度按宽度200的比例缩放
+          const h = (200 / image.width) * image.height;
+          const x = Math.random() * (width - w);
+          const y = Math.random() * (height - h);
+          const imageObj = { image, name, x, y, w, h };
+          imagesData.push(imageObj);
+          draw(imageObj);
+        };
+      });
+
+      // 渲染图片
+      function draw(imageObj) {
+        ctx.drawImage(imageObj.image, imageObj.x, imageObj.y, imageObj.w, imageObj.h);
+        ctx.beginPath();
+        ctx.rect(imageObj.x, imageObj.y, imageObj.w, imageObj.h);
+        ctx.stroke();
+      }
+
+      // 为canvas添加鼠标按下事件
+      canvas.addEventListener("mousedown", mousedownFn, false);
+
+      // 鼠标按下触发的方法
+      function mousedownFn(e) {
+        // 获取元素按下时的坐标
+        clickCoordinate.x = e.pageX - canvas.offsetLeft;
+        clickCoordinate.y = e.pageY - canvas.offsetTop;
+        // 判断选中的元素是哪一个
+        checkElement();
+
+        // 为canvas添加鼠标移动和鼠标抬起事件
+        canvas.addEventListener("mousemove", mousemoveFn, false);
+        canvas.addEventListener("mouseup", mouseupFn, false);
+      }
+
+      // 鼠标移动触发
+      function mousemoveFn(e) {
+        const moveX = e.pageX - canvas.offsetLeft;
+        const moveY = e.pageY - canvas.offsetTop;
+        // 计算移动元素的坐标
+        imagesData[target].x = imagesData[target].x + (moveX - clickCoordinate.x);
+        imagesData[target].y = imagesData[target].y + (moveY - clickCoordinate.y);
+        // 清空画布
+        ctx.clearRect(0, 0, width, height);
+        // 清空画布以后重新绘制
+        imagesData.forEach((i) => draw(i));
+        // 赋值
+        clickCoordinate.x = moveX;
+        clickCoordinate.y = moveY;
+      }
+
+      // 鼠标抬起触发
+      function mouseupFn() {
+        // 鼠标抬起以后移除事件
+        canvas.removeEventListener("mousemove", mousemoveFn, false);
+        canvas.removeEventListener("mouseup", mouseupFn, false);
+        // 销毁选中元素
+        target = undefined;
+      }
+
+      // 检测选中的元素是哪一个
+      function checkElement() {
+        imagesData.forEach((item, index) => {
+          draw(item);
+          if (ctx.isPointInPath(clickCoordinate.x, clickCoordinate.y)) {
+            target = index;
+            console.log("点击的元素是：", item.name);
+          }
+        });
+      }
+
+      button.addEventListener("click", function () {
+        img.src = canvas.toDataURL();
+      });
+    </script>
+  </body>
+</html>

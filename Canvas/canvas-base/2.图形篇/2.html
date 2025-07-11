@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 圆弧</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500" style="box-shadow: 0px 0px 5px #ccc; border-radius: 8px">
+      当前浏览器不支持canvas元素，请升级或更换浏览器！
+    </canvas>
+    <script>
+      const canvas = document.getElementById("canvas"); // 获取Canvas
+      const ctx = canvas.getContext("2d"); // 获取绘制上下文
+      ctx.strokeStyle = "#f00"; // 描边样式设置为红色
+      ctx.fillStyle = "#00f"; // 填充样式设置为蓝色
+      ctx.lineWidth = 5;
+
+      // Math.PI 值为 180 度
+      // Math.PI / 180 每 1 的值，* 90 就可以直观看到弧度
+
+      // 顺时针绘制一段90度的圆弧
+      ctx.arc(100, 100, 50, 0, 90 * (Math.PI / 180));
+      ctx.stroke();
+
+      // 逆时针绘制一段90度的圆弧
+      ctx.beginPath();
+      ctx.arc(300, 100, 50, 0, 90 * (Math.PI / 180), true);
+      ctx.stroke();
+
+      // 绘制一个圆
+      ctx.beginPath();
+      ctx.arc(100, 300, 50, 0, 360 * (Math.PI / 180));
+      ctx.stroke();
+
+      // 填充一个圆
+      ctx.beginPath();
+      ctx.arc(300, 300, 50, 0, Math.PI * 2);
+      ctx.fill();
+    </script>
+  </body>
+</html>

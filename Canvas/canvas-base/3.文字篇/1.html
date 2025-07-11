@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 文本</title>
+  </head>
+  <body>
+    <canvas id="canvas" width="450" height="450" style="box-shadow: 0px 0px 5px #ccc; border-radius: 8px">
+      当前浏览器不支持canvas元素，请升级或更换浏览器！
+    </canvas>
+    <script>
+      const canvas = document.getElementById("canvas"); // 获取Canvas
+      const ctx = canvas.getContext("2d"); // 获取绘制上下文
+      // 在（50,50）的位置绘制一段文本“掘金你好”
+      ctx.font = "30px Arial";
+      ctx.strokeText("携手创作，共同成长，你好，掘金。", 50, 50);
+      ctx.strokeText("携手创作，共同成长，你好，掘金。", 50, 100, 350);
+
+      ctx.fillText("携手创作，共同成长，你好，掘金。", 50, 150);
+      ctx.fillText("携手创作，共同成长，你好，掘金。", 50, 200, 350);
+    </script>
+  </body>
+</html>

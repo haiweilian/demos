@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas - 绘制图案</title>
+    <style>
+      /* 给画布增加一个阴影和圆角的样式 */
+      canvas {
+        box-shadow: 0px 0px 5px #ccc;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="500" height="500"> 当前浏览器不支持canvas元素，请升级或更换浏览器！ </canvas>
+    <script>
+      // 获取 canvas 元素
+      var canvas = document.getElementById("canvas");
+      // 通过判断getContext方法是否存在来判断浏览器的支持性
+      if (canvas.getContext) {
+        // 获取绘图上下文
+        var ctx = canvas.getContext("2d");
+        // 创建一个 image对象
+        var img = new Image();
+        img.src = "./image.png";
+        img.onload = function () {
+          // 图片加载完以后
+          // 创建图案
+          var ptrn = ctx.createPattern(img, "repeat");
+          ctx.fillStyle = ptrn;
+          ctx.fillRect(0, 0, 300, 300);
+
+          // 绘制图片
+          ctx.drawImage(img, 300, 300);
+        };
+      }
+    </script>
+  </body>
+</html>
