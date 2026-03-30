@@ -1,6 +1,0 @@
-[package]
-name = "ch16-03-shared-state"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]

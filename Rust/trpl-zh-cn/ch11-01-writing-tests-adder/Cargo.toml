@@ -1,6 +1,0 @@
-[package]
-name = "ch11-01-writing-tests-adder"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]

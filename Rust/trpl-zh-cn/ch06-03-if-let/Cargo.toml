@@ -1,6 +1,0 @@
-[package]
-name = "ch06-03-if-let"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]

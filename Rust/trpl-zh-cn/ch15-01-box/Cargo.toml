@@ -1,6 +1,0 @@
-[package]
-name = "ch15-01-box"
-version = "0.1.0"
-edition = "2021"
-
-[dependencies]
