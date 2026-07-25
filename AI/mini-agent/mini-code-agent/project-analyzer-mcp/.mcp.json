@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "project-analyzer": {
+      "command": "npx",
+      "args": ["tsx", "/path/to/project-analyzer-mcp/src/index.ts"],
+      "env": {}
+    }
+  }
+}
