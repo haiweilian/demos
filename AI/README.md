@@ -1,4 +1,4 @@
 - [LangChain](./langchain/)
 - [LangGraph](./langgraph/)
-- [MiniAgent](./mini-agent/)
+- [MiniAgent](./mini-code-agent/)
 - [图解 Agent](https://xiaolinnote.com/agent/)
