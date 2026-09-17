@@ -15,7 +15,7 @@ import type { AgentConfig } from "./types.js";
 function parseArgs(): AgentConfig {
   const args = process.argv.slice(2);
   const config: AgentConfig = {
-    model: "claude-sonnet-4-20250514",
+    model: "claude-opus-4-6",
     maxTokens: 16384,
     cwd: process.cwd(),
     enablePermissionCheck: true,
